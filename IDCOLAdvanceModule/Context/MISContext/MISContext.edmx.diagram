@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7f4fb1c6cb1c409e9f3c693fb50d6402" Name="Diagram1">
+        <EntityTypeShape EntityType="IDCOLMISModel.Accounts_ChartOfAccounts" Width="1.5" PointX="10.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Accounts_FiscalYear" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Admin_Office" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Admin_Rank" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Loan_Bank" Width="1.5" PointX="5.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Loan_Bank_Branch" Width="1.5" PointX="8" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IDCOLMISModel.UserTable" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="IDCOLMISModel.FK_Accounts_ChartOfAccounts_Loan_Bank_Branch" ManuallyRouted="false" />
+        <AssociationConnector Association="IDCOLMISModel.FK_UserTable_Admin_Office" ManuallyRouted="false" />
+        <AssociationConnector Association="IDCOLMISModel.FK_UserTable_Admin_Rank" ManuallyRouted="false" />
+        <AssociationConnector Association="IDCOLMISModel.FK_Loan_Bank_Branch_Loan_Bank" ManuallyRouted="false" />
+        <AssociationConnector Association="IDCOLMISModel.FK_UserTable_UserTable_SUPERVISOR" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Accounts_NC_VendorInfo" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Solar_CurrencyInfo" Width="1.5" PointX="11.375" PointY="8.75" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Admin_Departments" Width="1.5" PointX="8.375" PointY="9" />
+        <AssociationConnector Association="IDCOLMISModel.FK_UserTable_Admin_Departments" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Accounts_NC_VatTaxCategory" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Accounts_NC_VATTAXTypeConfig" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IDCOLMISModel.Accounts_VoucherTypes" Width="1.5" PointX="2.75" PointY="12.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

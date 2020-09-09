@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IDCOLMISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts_ChartOfAccounts">
+    <Key>
+      <PropertyRef Name="AccountCode" />
+    </Key>
+    <Property Name="AccountCode" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="AccountDesc" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="AccountDetails" Type="nvarchar" MaxLength="250" />
+    <Property Name="AccountType" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="DefaultCurrencyCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="AccountGroup" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="StructureCode" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="NormalBalance" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="ProjectID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CashBankType" Type="varchar" MaxLength="10" />
+    <Property Name="COATypeID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IsOnBalanceSheet" Type="bit" />
+    <Property Name="Solar_POID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IsRefinence" Type="bit" />
+    <Property Name="Category_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IsDonor" Type="bit" />
+    <Property Name="Branch_ID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IsVatTaxAccount" Type="bit" Nullable="false" />
+    <Property Name="IsRetentionAccount" Type="bit" Nullable="false" />
+    <Property Name="VatTaxTypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="Accounts_FiscalYear">
+    <Key>
+      <PropertyRef Name="FiscalYearId" />
+    </Key>
+    <Property Name="FiscalYearId" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FiscalYearName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateFrom" Type="datetime" Nullable="false" />
+    <Property Name="DateTo" Type="datetime" Nullable="false" />
+    <Property Name="IsCurrent" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsClosed" Type="bit" />
+  </EntityType>
+  <EntityType Name="Accounts_NC_VatTaxCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Percentage" Type="varchar" MaxLength="50" />
+    <Property Name="VatTaxTypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="Accounts_NC_VATTAXTypeConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Accounts_NC_VendorInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="IsCompany" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Accounts_VoucherTypes">
+    <Key>
+      <PropertyRef Name="VouTypeId" />
+    </Key>
+    <Property Name="VouTypeId" Type="smallint" Nullable="false" />
+    <Property Name="VouType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShortName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Admin_Departments">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Priority" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="OrderBy" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="DepartmentCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Admin_Office">
+    <Key>
+      <PropertyRef Name="OfficeID" />
+    </Key>
+    <Property Name="OfficeID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OfficeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="date" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Priority" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="OrderBy" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeType" Type="int" />
+  </EntityType>
+  <EntityType Name="Admin_Rank">
+    <Key>
+      <PropertyRef Name="RankID" />
+    </Key>
+    <Property Name="RankID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RankName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Priority" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="OrderBy" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Loan_Bank">
+    <Key>
+      <PropertyRef Name="Bank_ID" />
+    </Key>
+    <Property Name="Bank_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bank_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Bank_Address" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Phone_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Created_On" Type="datetime" Nullable="false" />
+    <Property Name="Created_By" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="Modified_By" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsActiveForLoanDept" Type="bit" />
+    <Property Name="IsActiveForAccountsDept" Type="bit" />
+    <Property Name="IsActiveForRE" Type="bit" />
+    <Property Name="ChequeType" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Loan_Bank_Branch">
+    <Key>
+      <PropertyRef Name="Branch_ID" />
+    </Key>
+    <Property Name="Branch_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bank_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Branch_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Created_On" Type="datetime" Nullable="false" />
+    <Property Name="Created_By" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="Modified_By" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Solar_CurrencyInfo">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Symbol" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsBase" Type="nvarchar" MaxLength="1" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ShortName" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="NamePrefix" Type="nvarchar" MaxLength="10" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="30" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="NameSuffix" Type="nvarchar" MaxLength="20" />
+    <Property Name="TemporaryAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="30" />
+    <Property Name="SecondaryPhone" Type="nvarchar" MaxLength="30" />
+    <Property Name="SecondaryPhone2" Type="nvarchar" MaxLength="30" />
+    <Property Name="SecondaryEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecondaryEmail2" Type="nvarchar" MaxLength="50" />
+    <Property Name="NationalID" Type="nvarchar" MaxLength="30" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="IsMerried" Type="bit" />
+    <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpousePhoneNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="BloodGroupID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="RankID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EmployeeID" Type="nvarchar" MaxLength="20" />
+    <Property Name="SupervisorID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="DepartmentID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="OfficeID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="WorkLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrimaryEmail" Type="nvarchar" MaxLength="30" />
+    <Property Name="Extension" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="PrimaryPhone" Type="nvarchar" MaxLength="30" />
+    <Property Name="JoiningDate" Type="date" />
+    <Property Name="PCName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecretQuestion" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecretAnswer" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" MaxLength="30" />
+    <Property Name="PasswordExpirationDays" Type="int" />
+    <Property Name="PaswordInvalidAccess" Type="int" />
+    <Property Name="ISDeleted" Type="bit" Nullable="false" />
+    <Property Name="EmeggencyContactName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmergencyContactAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="EmergencyContactPrimaryPhone" Type="nvarchar" MaxLength="30" />
+    <Property Name="EmergencyContactSecondaryPhone" Type="nvarchar" MaxLength="30" />
+    <Property Name="EmergencyContactRelationshipID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="BankAccountNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Accounts_ChartOfAccounts_Loan_Bank_Branch">
+    <End Role="Loan_Bank_Branch" Type="Self.Loan_Bank_Branch" Multiplicity="0..1" />
+    <End Role="Accounts_ChartOfAccounts" Type="Self.Accounts_ChartOfAccounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loan_Bank_Branch">
+        <PropertyRef Name="Branch_ID" />
+      </Principal>
+      <Dependent Role="Accounts_ChartOfAccounts">
+        <PropertyRef Name="Branch_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Loan_Bank_Branch_Loan_Bank">
+    <End Role="Loan_Bank" Type="Self.Loan_Bank" Multiplicity="1" />
+    <End Role="Loan_Bank_Branch" Type="Self.Loan_Bank_Branch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loan_Bank">
+        <PropertyRef Name="Bank_ID" />
+      </Principal>
+      <Dependent Role="Loan_Bank_Branch">
+        <PropertyRef Name="Bank_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTable_Admin_Departments">
+    <End Role="Admin_Departments" Type="Self.Admin_Departments" Multiplicity="0..1" />
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin_Departments">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTable_Admin_Office">
+    <End Role="Admin_Office" Type="Self.Admin_Office" Multiplicity="0..1" />
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin_Office">
+        <PropertyRef Name="OfficeID" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="OfficeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTable_Admin_Rank">
+    <End Role="Admin_Rank" Type="Self.Admin_Rank" Multiplicity="0..1" />
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin_Rank">
+        <PropertyRef Name="RankID" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="RankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTable_UserTable_SUPERVISOR">
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="0..1" />
+    <End Role="UserTable1" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserTable1">
+        <PropertyRef Name="SupervisorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IDCOLMISModelStoreContainer">
+    <EntitySet Name="Accounts_ChartOfAccounts" EntityType="Self.Accounts_ChartOfAccounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accounts_FiscalYear" EntityType="Self.Accounts_FiscalYear" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accounts_NC_VatTaxCategory" EntityType="Self.Accounts_NC_VatTaxCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accounts_NC_VATTAXTypeConfig" EntityType="Self.Accounts_NC_VATTAXTypeConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accounts_NC_VendorInfo" EntityType="Self.Accounts_NC_VendorInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accounts_VoucherTypes" EntityType="Self.Accounts_VoucherTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin_Departments" EntityType="Self.Admin_Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin_Office" EntityType="Self.Admin_Office" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin_Rank" EntityType="Self.Admin_Rank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loan_Bank" EntityType="Self.Loan_Bank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loan_Bank_Branch" EntityType="Self.Loan_Bank_Branch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Solar_CurrencyInfo" EntityType="Self.Solar_CurrencyInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Accounts_ChartOfAccounts_Loan_Bank_Branch" Association="Self.FK_Accounts_ChartOfAccounts_Loan_Bank_Branch">
+      <End Role="Loan_Bank_Branch" EntitySet="Loan_Bank_Branch" />
+      <End Role="Accounts_ChartOfAccounts" EntitySet="Accounts_ChartOfAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Loan_Bank_Branch_Loan_Bank" Association="Self.FK_Loan_Bank_Branch_Loan_Bank">
+      <End Role="Loan_Bank" EntitySet="Loan_Bank" />
+      <End Role="Loan_Bank_Branch" EntitySet="Loan_Bank_Branch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTable_Admin_Departments" Association="Self.FK_UserTable_Admin_Departments">
+      <End Role="Admin_Departments" EntitySet="Admin_Departments" />
+      <End Role="UserTable" EntitySet="UserTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTable_Admin_Office" Association="Self.FK_UserTable_Admin_Office">
+      <End Role="Admin_Office" EntitySet="Admin_Office" />
+      <End Role="UserTable" EntitySet="UserTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTable_Admin_Rank" Association="Self.FK_UserTable_Admin_Rank">
+      <End Role="Admin_Rank" EntitySet="Admin_Rank" />
+      <End Role="UserTable" EntitySet="UserTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTable_UserTable_SUPERVISOR" Association="Self.FK_UserTable_UserTable_SUPERVISOR">
+      <End Role="UserTable" EntitySet="UserTable" />
+      <End Role="UserTable1" EntitySet="UserTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IDCOLAdvanceDBModelStoreContainer" CdmEntityContainer="AdvanceQueryContext">
+    <FunctionImportMapping FunctionImportName="Advance_SP_GetLocalTravelReport" FunctionName="IDCOLAdvanceDBModel.Store.Advance_SP_GetLocalTravelReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_SP_GetLocalTravelReport">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="EmployeeUserName" ColumnName="EmployeeUserName" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="RequisitionNo" ColumnName="RequisitionNo" />
+          <ScalarProperty Name="RequisitionPurpose" ColumnName="RequisitionPurpose" />
+          <ScalarProperty Name="RequisitionPlace" ColumnName="RequisitionPlace" />
+          <ScalarProperty Name="RequisitionFromDate" ColumnName="RequisitionFromDate" />
+          <ScalarProperty Name="RequisitionToDate" ColumnName="RequisitionToDate" />
+          <ScalarProperty Name="AdvanceIssueDate" ColumnName="AdvanceIssueDate" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="ExpenseNo" ColumnName="ExpenseNo" />
+          <ScalarProperty Name="ExpensePurpose" ColumnName="ExpensePurpose" />
+          <ScalarProperty Name="ExpensePlace" ColumnName="ExpensePlace" />
+          <ScalarProperty Name="ExpenseFromDate" ColumnName="ExpenseFromDate" />
+          <ScalarProperty Name="ExpenseToDate" ColumnName="ExpenseToDate" />
+          <ScalarProperty Name="ExpenseIssueDate" ColumnName="ExpenseIssueDate" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Advance_SP_GetOverseasTravelReport" FunctionName="IDCOLAdvanceDBModel.Store.Advance_SP_GetOverseasTravelReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_SP_GetOverseasTravelReport">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="EmployeeUserName" ColumnName="EmployeeUserName" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="RequisitionNo" ColumnName="RequisitionNo" />
+          <ScalarProperty Name="RequisitionPurpose" ColumnName="RequisitionPurpose" />
+          <ScalarProperty Name="RequisitionPlace" ColumnName="RequisitionPlace" />
+          <ScalarProperty Name="RequisitionCountryName" ColumnName="RequisitionCountryName" />
+          <ScalarProperty Name="RequisitionFromDate" ColumnName="RequisitionFromDate" />
+          <ScalarProperty Name="RequisitionToDate" ColumnName="RequisitionToDate" />
+          <ScalarProperty Name="AdvanceIssueDate" ColumnName="AdvanceIssueDate" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="ExpenseNo" ColumnName="ExpenseNo" />
+          <ScalarProperty Name="ExpensePurpose" ColumnName="ExpensePurpose" />
+          <ScalarProperty Name="ExpensePlace" ColumnName="ExpensePlace" />
+          <ScalarProperty Name="ExpenseCountryName" ColumnName="ExpenseCountryName" />
+          <ScalarProperty Name="ExpenseFromDate" ColumnName="ExpenseFromDate" />
+          <ScalarProperty Name="ExpenseToDate" ColumnName="ExpenseToDate" />
+          <ScalarProperty Name="ExpenseIssueDate" ColumnName="ExpenseIssueDate" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Advance_VW_GetAdvanceExpense">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceExpense">
+        <MappingFragment StoreEntitySet="Advance_VW_GetAdvanceExpense">
+          <ScalarProperty Name="ReceivedOn" ColumnName="ReceivedOn" />
+          <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+          <ScalarProperty Name="IsReceived" ColumnName="IsReceived" />
+          <ScalarProperty Name="RejectedOn" ColumnName="RejectedOn" />
+          <ScalarProperty Name="RejectedBy" ColumnName="RejectedBy" />
+          <ScalarProperty Name="AdvanceCorporateRemarks" ColumnName="AdvanceCorporateRemarks" />
+          <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="NoOfUnit" ColumnName="NoOfUnit" />
+          <ScalarProperty Name="ExpenseIssueDate" ColumnName="ExpenseIssueDate" />
+          <ScalarProperty Name="PaidBy" ColumnName="PaidBy" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="ExpenseAmountInBDT" ColumnName="ExpenseAmountInBDT" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="EmployeeRankName" ColumnName="EmployeeRankName" />
+          <ScalarProperty Name="EmployeeRankID" ColumnName="EmployeeRankID" />
+          <ScalarProperty Name="EmployeeDepartmentName" ColumnName="EmployeeDepartmentName" />
+          <ScalarProperty Name="EmployeeDepartmentID" ColumnName="EmployeeDepartmentID" />
+          <ScalarProperty Name="RecommendedOn" ColumnName="RecommendedOn" />
+          <ScalarProperty Name="RecommendedBy" ColumnName="RecommendedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ApprovedOn" ColumnName="ApprovedOn" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AdvanceExpenseStatusName" ColumnName="AdvanceExpenseStatusName" />
+          <ScalarProperty Name="AdvanceExpenseStatusId" ColumnName="AdvanceExpenseStatusId" />
+          <ScalarProperty Name="ExpenseEntryDate" ColumnName="ExpenseEntryDate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="NoOfDays" ColumnName="NoOfDays" />
+          <ScalarProperty Name="ConversionRate" ColumnName="ConversionRate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="CeilingAmount" ColumnName="CeilingAmount" />
+          <ScalarProperty Name="IsCeilingApplicable" ColumnName="IsCeilingApplicable" />
+          <ScalarProperty Name="AdvanceCategoryName" ColumnName="AdvanceCategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="AuthorizedOn" ColumnName="AuthorizedOn" />
+          <ScalarProperty Name="ApprovalStatusId" ColumnName="ApprovalStatusId" />
+          <ScalarProperty Name="ExpenseApprovalTicketId" ColumnName="ExpenseApprovalTicketId" />
+          <ScalarProperty Name="ExpenseNo" ColumnName="ExpenseNo" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="RequesterUserName" ColumnName="RequesterUserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetAdvanceExpenseDetail">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceExpenseDetail">
+        <MappingFragment StoreEntitySet="Advance_VW_GetAdvanceExpenseDetail">
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="ExpenseVoucherDetailId" ColumnName="ExpenseVoucherDetailId" />
+          <ScalarProperty Name="VatTaxTypeName" ColumnName="VatTaxTypeName" />
+          <ScalarProperty Name="VatTaxTypeId" ColumnName="VatTaxTypeId" />
+          <ScalarProperty Name="DetailConversionRate" ColumnName="DetailConversionRate" />
+          <ScalarProperty Name="DetailCurrency" ColumnName="DetailCurrency" />
+          <ScalarProperty Name="TravelSponsorFinancedDetailAmount" ColumnName="TravelSponsorFinancedDetailAmount" />
+          <ScalarProperty Name="OverseasSponsorFinancedDetailAmount" ColumnName="OverseasSponsorFinancedDetailAmount" />
+          <ScalarProperty Name="IsThirdPartyReceipient" ColumnName="IsThirdPartyReceipient" />
+          <ScalarProperty Name="ReceipientOrPayeeName" ColumnName="ReceipientOrPayeeName" />
+          <ScalarProperty Name="OverseasToDate" ColumnName="OverseasToDate" />
+          <ScalarProperty Name="OverseasFromDate" ColumnName="OverseasFromDate" />
+          <ScalarProperty Name="OverseasTravelCostItemId" ColumnName="OverseasTravelCostItemId" />
+          <ScalarProperty Name="DetailToDate" ColumnName="DetailToDate" />
+          <ScalarProperty Name="DetailFromDate" ColumnName="DetailFromDate" />
+          <ScalarProperty Name="TravelCostItemId" ColumnName="TravelCostItemId" />
+          <ScalarProperty Name="DetailRemarks" ColumnName="DetailRemarks" />
+          <ScalarProperty Name="ExpenseAmountInBDT" ColumnName="ExpenseAmountInBDT" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="DetailPurpose" ColumnName="DetailPurpose" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="NoOfUnit" ColumnName="NoOfUnit" />
+          <ScalarProperty Name="AdvanceCorporateRemarks" ColumnName="AdvanceCorporateRemarks" />
+          <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+          <ScalarProperty Name="HeaderUnitCost" ColumnName="HeaderUnitCost" />
+          <ScalarProperty Name="HeaderNoOfUnit" ColumnName="HeaderNoOfUnit" />
+          <ScalarProperty Name="ExpenseIssueDate" ColumnName="ExpenseIssueDate" />
+          <ScalarProperty Name="PaidBy" ColumnName="PaidBy" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="EmployeeRankName" ColumnName="EmployeeRankName" />
+          <ScalarProperty Name="EmployeeRankID" ColumnName="EmployeeRankID" />
+          <ScalarProperty Name="EmployeeDepartmentName" ColumnName="EmployeeDepartmentName" />
+          <ScalarProperty Name="EmployeeDepartmentID" ColumnName="EmployeeDepartmentID" />
+          <ScalarProperty Name="SourceOfFund" ColumnName="SourceOfFund" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="OverseasPlaceOfVisit" ColumnName="OverseasPlaceOfVisit" />
+          <ScalarProperty Name="OverseasPlaceOfVisitId" ColumnName="OverseasPlaceOfVisitId" />
+          <ScalarProperty Name="PlaceOfVisit" ColumnName="PlaceOfVisit" />
+          <ScalarProperty Name="CorporateAdvisoryPlaceOfEvent" ColumnName="CorporateAdvisoryPlaceOfEvent" />
+          <ScalarProperty Name="PlaceOfEvent" ColumnName="PlaceOfEvent" />
+          <ScalarProperty Name="RecommendedOn" ColumnName="RecommendedOn" />
+          <ScalarProperty Name="RecommendedBy" ColumnName="RecommendedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ApprovedOn" ColumnName="ApprovedOn" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AdvanceExpenseStatusName" ColumnName="AdvanceExpenseStatusName" />
+          <ScalarProperty Name="AdvanceExpenseStatusId" ColumnName="AdvanceExpenseStatusId" />
+          <ScalarProperty Name="OverseasSponsorName" ColumnName="OverseasSponsorName" />
+          <ScalarProperty Name="SponsorName" ColumnName="SponsorName" />
+          <ScalarProperty Name="IsOverseasSponsorFinanced" ColumnName="IsOverseasSponsorFinanced" />
+          <ScalarProperty Name="IsSponsorFinanced" ColumnName="IsSponsorFinanced" />
+          <ScalarProperty Name="ExpenseEntryDate" ColumnName="ExpenseEntryDate" />
+          <ScalarProperty Name="HeaderPurpose" ColumnName="HeaderPurpose" />
+          <ScalarProperty Name="NoOfDays" ColumnName="NoOfDays" />
+          <ScalarProperty Name="HeaderConversionRate" ColumnName="HeaderConversionRate" />
+          <ScalarProperty Name="HeaderCurrency" ColumnName="HeaderCurrency" />
+          <ScalarProperty Name="HeaderToDate" ColumnName="HeaderToDate" />
+          <ScalarProperty Name="HeaderFromDate" ColumnName="HeaderFromDate" />
+          <ScalarProperty Name="CeilingAmount" ColumnName="CeilingAmount" />
+          <ScalarProperty Name="IsCeilingApplicable" ColumnName="IsCeilingApplicable" />
+          <ScalarProperty Name="AdvanceCategoryName" ColumnName="AdvanceCategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="AuthorizedOn" ColumnName="AuthorizedOn" />
+          <ScalarProperty Name="ApprovalStatusId" ColumnName="ApprovalStatusId" />
+          <ScalarProperty Name="ExpenseApprovalTicketId" ColumnName="ExpenseApprovalTicketId" />
+          <ScalarProperty Name="ExpenseNo" ColumnName="ExpenseNo" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="RequesterUserName" ColumnName="RequesterUserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetAdvanceRequisition">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceRequisition">
+        <MappingFragment StoreEntitySet="Advance_VW_GetAdvanceRequisition">
+          <ScalarProperty Name="ReceivedBy" ColumnName="ReceivedBy" />
+          <ScalarProperty Name="ReceivedOn" ColumnName="ReceivedOn" />
+          <ScalarProperty Name="IsReceived" ColumnName="IsReceived" />
+          <ScalarProperty Name="AdvanceCorporateRemarks" ColumnName="AdvanceCorporateRemarks" />
+          <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="NoOfUnit" ColumnName="NoOfUnit" />
+          <ScalarProperty Name="AdvanceExpenseHeaderId" ColumnName="AdvanceExpenseHeaderId" />
+          <ScalarProperty Name="AdvanceIssueDate" ColumnName="AdvanceIssueDate" />
+          <ScalarProperty Name="PaidBy" ColumnName="PaidBy" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="EmployeeRankName" ColumnName="EmployeeRankName" />
+          <ScalarProperty Name="EmployeeRankID" ColumnName="EmployeeRankID" />
+          <ScalarProperty Name="EmployeeDepartmentName" ColumnName="EmployeeDepartmentName" />
+          <ScalarProperty Name="EmployeeDepartmentID" ColumnName="EmployeeDepartmentID" />
+          <ScalarProperty Name="SourceOfFund" ColumnName="SourceOfFund" />
+          <ScalarProperty Name="PlaceOfVisit" ColumnName="PlaceOfVisit" />
+          <ScalarProperty Name="PlaceOfEvent" ColumnName="PlaceOfEvent" />
+          <ScalarProperty Name="RejectedOn" ColumnName="RejectedOn" />
+          <ScalarProperty Name="RejectedBy" ColumnName="RejectedBy" />
+          <ScalarProperty Name="RecommendedOn" ColumnName="RecommendedOn" />
+          <ScalarProperty Name="RecommendedBy" ColumnName="RecommendedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ApprovedOn" ColumnName="ApprovedOn" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RequisitionStatusName" ColumnName="RequisitionStatusName" />
+          <ScalarProperty Name="AdvanceRequisitionStatusId" ColumnName="AdvanceRequisitionStatusId" />
+          <ScalarProperty Name="SponsorName" ColumnName="SponsorName" />
+          <ScalarProperty Name="IsSponsorFinanced" ColumnName="IsSponsorFinanced" />
+          <ScalarProperty Name="RequisitionDate" ColumnName="RequisitionDate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="NoOfDays" ColumnName="NoOfDays" />
+          <ScalarProperty Name="ConversionRate" ColumnName="ConversionRate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="CeilingAmount" ColumnName="CeilingAmount" />
+          <ScalarProperty Name="IsCeilingApplicable" ColumnName="IsCeilingApplicable" />
+          <ScalarProperty Name="RequisitionCategoryName" ColumnName="RequisitionCategoryName" />
+          <ScalarProperty Name="BaseAdvanceCategoryId" ColumnName="BaseAdvanceCategoryId" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="AuthorizedOn" ColumnName="AuthorizedOn" />
+          <ScalarProperty Name="ApprovalStatusId" ColumnName="ApprovalStatusId" />
+          <ScalarProperty Name="RequistionApprovalTicketId" ColumnName="RequistionApprovalTicketId" />
+          <ScalarProperty Name="RequisitionNo" ColumnName="RequisitionNo" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="RequesterUserName" ColumnName="RequesterUserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetAdvanceRequisitionDetail">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceRequisitionDetail">
+        <MappingFragment StoreEntitySet="Advance_VW_GetAdvanceRequisitionDetail">
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="RequisitionVoucherDetailId" ColumnName="RequisitionVoucherDetailId" />
+          <ScalarProperty Name="VatTaxTypeName" ColumnName="VatTaxTypeName" />
+          <ScalarProperty Name="VatTaxTypeId" ColumnName="VatTaxTypeId" />
+          <ScalarProperty Name="DetailConversionRate" ColumnName="DetailConversionRate" />
+          <ScalarProperty Name="DetailCurrency" ColumnName="DetailCurrency" />
+          <ScalarProperty Name="TravelSponsorFinancedDetailAmount" ColumnName="TravelSponsorFinancedDetailAmount" />
+          <ScalarProperty Name="OverseasSponsorFinancedDetailAmount" ColumnName="OverseasSponsorFinancedDetailAmount" />
+          <ScalarProperty Name="IsThirdPartyReceipient" ColumnName="IsThirdPartyReceipient" />
+          <ScalarProperty Name="ReceipientOrPayeeName" ColumnName="ReceipientOrPayeeName" />
+          <ScalarProperty Name="OverseasToDate" ColumnName="OverseasToDate" />
+          <ScalarProperty Name="OverseasFromDate" ColumnName="OverseasFromDate" />
+          <ScalarProperty Name="OverseasTravelCostItemId" ColumnName="OverseasTravelCostItemId" />
+          <ScalarProperty Name="DetailToDate" ColumnName="DetailToDate" />
+          <ScalarProperty Name="DetailFromDate" ColumnName="DetailFromDate" />
+          <ScalarProperty Name="TravelCostItemId" ColumnName="TravelCostItemId" />
+          <ScalarProperty Name="MiscelleneousCostItemId" ColumnName="MiscelleneousCostItemId" />
+          <ScalarProperty Name="DetailRemarks" ColumnName="DetailRemarks" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="DetailPurpose" ColumnName="DetailPurpose" />
+          <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+          <ScalarProperty Name="NoOfUnit" ColumnName="NoOfUnit" />
+          <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+          <ScalarProperty Name="HeaderUnitCost" ColumnName="HeaderUnitCost" />
+          <ScalarProperty Name="HeaderNoOfUnit" ColumnName="HeaderNoOfUnit" />
+          <ScalarProperty Name="AdvanceExpenseHeaderId" ColumnName="AdvanceExpenseHeaderId" />
+          <ScalarProperty Name="AdvanceIssueDate" ColumnName="AdvanceIssueDate" />
+          <ScalarProperty Name="PaidBy" ColumnName="PaidBy" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="EmployeeRankName" ColumnName="EmployeeRankName" />
+          <ScalarProperty Name="EmployeeRankID" ColumnName="EmployeeRankID" />
+          <ScalarProperty Name="EmployeeDepartmentName" ColumnName="EmployeeDepartmentName" />
+          <ScalarProperty Name="EmployeeDepartmentID" ColumnName="EmployeeDepartmentID" />
+          <ScalarProperty Name="SourceOfFund" ColumnName="SourceOfFund" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="OverseasPlaceOfVisit" ColumnName="OverseasPlaceOfVisit" />
+          <ScalarProperty Name="OverseasPlaceOfVisitId" ColumnName="OverseasPlaceOfVisitId" />
+          <ScalarProperty Name="PlaceOfVisit" ColumnName="PlaceOfVisit" />
+          <ScalarProperty Name="CorporateAdvisoryPlaceOfEvent" ColumnName="CorporateAdvisoryPlaceOfEvent" />
+          <ScalarProperty Name="PlaceOfEvent" ColumnName="PlaceOfEvent" />
+          <ScalarProperty Name="RecommendedOn" ColumnName="RecommendedOn" />
+          <ScalarProperty Name="RecommendedBy" ColumnName="RecommendedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ApprovedOn" ColumnName="ApprovedOn" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RequisitionStatusName" ColumnName="RequisitionStatusName" />
+          <ScalarProperty Name="AdvanceRequisitionStatusId" ColumnName="AdvanceRequisitionStatusId" />
+          <ScalarProperty Name="OverseasSponsorName" ColumnName="OverseasSponsorName" />
+          <ScalarProperty Name="SponsorName" ColumnName="SponsorName" />
+          <ScalarProperty Name="IsOverseasSponsorFinanced" ColumnName="IsOverseasSponsorFinanced" />
+          <ScalarProperty Name="IsSponsorFinanced" ColumnName="IsSponsorFinanced" />
+          <ScalarProperty Name="RequisitionDate" ColumnName="RequisitionDate" />
+          <ScalarProperty Name="HeaderPurpose" ColumnName="HeaderPurpose" />
+          <ScalarProperty Name="NoOfDays" ColumnName="NoOfDays" />
+          <ScalarProperty Name="HeaderConversionRate" ColumnName="HeaderConversionRate" />
+          <ScalarProperty Name="HeaderCurrency" ColumnName="HeaderCurrency" />
+          <ScalarProperty Name="HeaderToDate" ColumnName="HeaderToDate" />
+          <ScalarProperty Name="HeaderFromDate" ColumnName="HeaderFromDate" />
+          <ScalarProperty Name="CeilingAmount" ColumnName="CeilingAmount" />
+          <ScalarProperty Name="IsCeilingApplicable" ColumnName="IsCeilingApplicable" />
+          <ScalarProperty Name="RequisitionCategoryName" ColumnName="RequisitionCategoryName" />
+          <ScalarProperty Name="BaseAdvanceCategoryId" ColumnName="BaseAdvanceCategoryId" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="AuthorizedOn" ColumnName="AuthorizedOn" />
+          <ScalarProperty Name="ApprovalStatusId" ColumnName="ApprovalStatusId" />
+          <ScalarProperty Name="RequistionApprovalTicketId" ColumnName="RequistionApprovalTicketId" />
+          <ScalarProperty Name="RequisitionNo" ColumnName="RequisitionNo" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="RequesterUserName" ColumnName="RequesterUserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetAgingReport">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetAgingReport">
+        <MappingFragment StoreEntitySet="Advance_VW_GetAgingReport">
+          <ScalarProperty Name="ExpenseIssueDate" ColumnName="ExpenseIssueDate" />
+          <ScalarProperty Name="IsExpensePaid" ColumnName="IsExpensePaid" />
+          <ScalarProperty Name="IsAdvancePaid" ColumnName="IsAdvancePaid" />
+          <ScalarProperty Name="ExpenseStatus" ColumnName="ExpenseStatus" />
+          <ScalarProperty Name="ExpenseStatusId" ColumnName="ExpenseStatusId" />
+          <ScalarProperty Name="DaysCount" ColumnName="DaysCount" />
+          <ScalarProperty Name="AdjustedDate" ColumnName="AdjustedDate" />
+          <ScalarProperty Name="ExpensePlaceOfOccurrance" ColumnName="ExpensePlaceOfOccurrance" />
+          <ScalarProperty Name="RequisitionPlaceOfOccurrance" ColumnName="RequisitionPlaceOfOccurrance" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="AdvanceIssueDate" ColumnName="AdvanceIssueDate" />
+          <ScalarProperty Name="RequisitionStatusId" ColumnName="RequisitionStatusId" />
+          <ScalarProperty Name="ApprovalLevelName" ColumnName="ApprovalLevelName" />
+          <ScalarProperty Name="ExpenseApprovalDate" ColumnName="ExpenseApprovalDate" />
+          <ScalarProperty Name="RequisitionApprovalDate" ColumnName="RequisitionApprovalDate" />
+          <ScalarProperty Name="RequisitionStatus" ColumnName="RequisitionStatus" />
+          <ScalarProperty Name="ExpenseCurrency" ColumnName="ExpenseCurrency" />
+          <ScalarProperty Name="ExpenseConversionRate" ColumnName="ExpenseConversionRate" />
+          <ScalarProperty Name="ExpenseAmountInBDT" ColumnName="ExpenseAmountInBDT" />
+          <ScalarProperty Name="RequisitionCurrency" ColumnName="RequisitionCurrency" />
+          <ScalarProperty Name="RequisitionConversionRate" ColumnName="RequisitionConversionRate" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="AdvanceCategoryName" ColumnName="AdvanceCategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="BaseAdvanceCategoryName" ColumnName="BaseAdvanceCategoryName" />
+          <ScalarProperty Name="BaseAdvanceCategoryId" ColumnName="BaseAdvanceCategoryId" />
+          <ScalarProperty Name="ExpenseEntryDate" ColumnName="ExpenseEntryDate" />
+          <ScalarProperty Name="RequisitionEntryDate" ColumnName="RequisitionEntryDate" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="RequisitionID" ColumnName="RequisitionID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetApprovalLevelMember">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetApprovalLevelMember">
+        <MappingFragment StoreEntitySet="Advance_VW_GetApprovalLevelMember">
+          <ScalarProperty Name="EmployeeEmail" ColumnName="EmployeeEmail" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+          <ScalarProperty Name="EmployeeUserName" ColumnName="EmployeeUserName" />
+          <ScalarProperty Name="EmployeeFullName" ColumnName="EmployeeFullName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PriorityOrder" ColumnName="PriorityOrder" />
+          <ScalarProperty Name="ApprovalLevelId" ColumnName="ApprovalLevelId" />
+          <ScalarProperty Name="ApprovalLevelMemberId" ColumnName="ApprovalLevelMemberId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetDesignationWithEmployeeCategory">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetDesignationWithEmployeeCategory">
+        <MappingFragment StoreEntitySet="Advance_VW_GetDesignationWithEmployeeCategory">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EmployeeCategorySettingsId" ColumnName="EmployeeCategorySettingsId" />
+          <ScalarProperty Name="EmployeeCategoryName" ColumnName="EmployeeCategoryName" />
+          <ScalarProperty Name="EmployeeCategoryId" ColumnName="EmployeeCategoryId" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetEntitlementMappingSetting">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetEntitlementMappingSetting">
+        <MappingFragment StoreEntitySet="Advance_VW_GetEntitlementMappingSetting">
+          <ScalarProperty Name="IsEntitlementMandatory" ColumnName="IsEntitlementMandatory" />
+          <ScalarProperty Name="IsFullAmountEntitlement" ColumnName="IsFullAmountEntitlement" />
+          <ScalarProperty Name="EntitlementAmount" ColumnName="EntitlementAmount" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="RankId" ColumnName="RankId" />
+          <ScalarProperty Name="CostItemName" ColumnName="CostItemName" />
+          <ScalarProperty Name="CostItemId" ColumnName="CostItemId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetExpenseSignatory">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetExpenseSignatory">
+        <MappingFragment StoreEntitySet="Advance_VW_GetExpenseSignatory">
+          <ScalarProperty Name="SignatoryDesignation" ColumnName="SignatoryDesignation" />
+          <ScalarProperty Name="SignatoryName" ColumnName="SignatoryName" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetExpenseSourceOfFund">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetExpenseSourceOfFund">
+        <MappingFragment StoreEntitySet="Advance_VW_GetExpenseSourceOfFund">
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="SourceOfFundName" ColumnName="SourceOfFundName" />
+          <ScalarProperty Name="SourceOfFundId" ColumnName="SourceOfFundId" />
+          <ScalarProperty Name="ExpenseHeaderId" ColumnName="ExpenseHeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetHeadOfDepartment">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetHeadOfDepartment">
+        <MappingFragment StoreEntitySet="Advance_VW_GetHeadOfDepartment">
+          <ScalarProperty Name="HODId" ColumnName="HODId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="HeadOfDepartmentFullName" ColumnName="HeadOfDepartmentFullName" />
+          <ScalarProperty Name="HeadOfDepartmentUserName" ColumnName="HeadOfDepartmentUserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetLocalTravelReport">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetLocalTravelReport">
+        <MappingFragment StoreEntitySet="Advance_VW_GetLocalTravelReport">
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="ExpenseIssueDate" ColumnName="ExpenseIssueDate" />
+          <ScalarProperty Name="ExpenseToDate" ColumnName="ExpenseToDate" />
+          <ScalarProperty Name="ExpenseFromDate" ColumnName="ExpenseFromDate" />
+          <ScalarProperty Name="ExpensePlace" ColumnName="ExpensePlace" />
+          <ScalarProperty Name="ExpensePurpose" ColumnName="ExpensePurpose" />
+          <ScalarProperty Name="ExpenseNo" ColumnName="ExpenseNo" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="AdvanceIssueDate" ColumnName="AdvanceIssueDate" />
+          <ScalarProperty Name="RequisitionToDate" ColumnName="RequisitionToDate" />
+          <ScalarProperty Name="RequisitionFromDate" ColumnName="RequisitionFromDate" />
+          <ScalarProperty Name="RequisitionPlace" ColumnName="RequisitionPlace" />
+          <ScalarProperty Name="RequisitionPurpose" ColumnName="RequisitionPurpose" />
+          <ScalarProperty Name="RequisitionNo" ColumnName="RequisitionNo" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeUserName" ColumnName="EmployeeUserName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetPendingExpenseReport">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetPendingExpenseReport">
+        <MappingFragment StoreEntitySet="Advance_VW_GetPendingExpenseReport">
+          <ScalarProperty Name="ExpenseDaysCount" ColumnName="ExpenseDaysCount" />
+          <ScalarProperty Name="ExpensePlaceOfOccurrance" ColumnName="ExpensePlaceOfOccurrance" />
+          <ScalarProperty Name="ExpenseStatus" ColumnName="ExpenseStatus" />
+          <ScalarProperty Name="ExpenseStatusId" ColumnName="ExpenseStatusId" />
+          <ScalarProperty Name="ExpenseApprovalLevelName" ColumnName="ExpenseApprovalLevelName" />
+          <ScalarProperty Name="ExpenseApprovalDate" ColumnName="ExpenseApprovalDate" />
+          <ScalarProperty Name="ExpenseCurrency" ColumnName="ExpenseCurrency" />
+          <ScalarProperty Name="ExpenseConversionRate" ColumnName="ExpenseConversionRate" />
+          <ScalarProperty Name="ExpenseAmountInBDT" ColumnName="ExpenseAmountInBDT" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="ExpensePurpose" ColumnName="ExpensePurpose" />
+          <ScalarProperty Name="ExpenseEntryDate" ColumnName="ExpenseEntryDate" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="AdvanceCategoryName" ColumnName="AdvanceCategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="BaseAdvanceCategoryName" ColumnName="BaseAdvanceCategoryName" />
+          <ScalarProperty Name="BaseAdvanceCategoryId" ColumnName="BaseAdvanceCategoryId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="RankId" ColumnName="RankId" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetPendingRequisitionReport">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetPendingRequisitionReport">
+        <MappingFragment StoreEntitySet="Advance_VW_GetPendingRequisitionReport">
+          <ScalarProperty Name="ExpenseDaysCount" ColumnName="ExpenseDaysCount" />
+          <ScalarProperty Name="RequisitionPlaceOfOccurrance" ColumnName="RequisitionPlaceOfOccurrance" />
+          <ScalarProperty Name="RequisitionStatus" ColumnName="RequisitionStatus" />
+          <ScalarProperty Name="RequisitionStatusId" ColumnName="RequisitionStatusId" />
+          <ScalarProperty Name="RequisitionApprovalLevelName" ColumnName="RequisitionApprovalLevelName" />
+          <ScalarProperty Name="RequisitionApprovalDate" ColumnName="RequisitionApprovalDate" />
+          <ScalarProperty Name="RequisitionCurrency" ColumnName="RequisitionCurrency" />
+          <ScalarProperty Name="RequisitionConversionRate" ColumnName="RequisitionConversionRate" />
+          <ScalarProperty Name="AdvanceCategoryName" ColumnName="AdvanceCategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="BaseAdvanceCategoryName" ColumnName="BaseAdvanceCategoryName" />
+          <ScalarProperty Name="BaseAdvanceCategoryId" ColumnName="BaseAdvanceCategoryId" />
+          <ScalarProperty Name="RequisitionPurpose" ColumnName="RequisitionPurpose" />
+          <ScalarProperty Name="RequisitionEntryDate" ColumnName="RequisitionEntryDate" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="RankId" ColumnName="RankId" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetRejectedExpenseReport">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetRejectedExpenseReport">
+        <MappingFragment StoreEntitySet="Advance_VW_GetRejectedExpenseReport">
+          <ScalarProperty Name="ExpenseRejectionDate" ColumnName="ExpenseRejectionDate" />
+          <ScalarProperty Name="ExpenseRejectioinRemarks" ColumnName="ExpenseRejectioinRemarks" />
+          <ScalarProperty Name="ExpensePlaceOfOccurrance" ColumnName="ExpensePlaceOfOccurrance" />
+          <ScalarProperty Name="ExpenseRejectedBy" ColumnName="ExpenseRejectedBy" />
+          <ScalarProperty Name="ExpenseStatus" ColumnName="ExpenseStatus" />
+          <ScalarProperty Name="ExpenseStatusId" ColumnName="ExpenseStatusId" />
+          <ScalarProperty Name="ExpenseApprovalLevelName" ColumnName="ExpenseApprovalLevelName" />
+          <ScalarProperty Name="ExpenseApprovalDate" ColumnName="ExpenseApprovalDate" />
+          <ScalarProperty Name="ExpenseCurrency" ColumnName="ExpenseCurrency" />
+          <ScalarProperty Name="ExpenseConversionRate" ColumnName="ExpenseConversionRate" />
+          <ScalarProperty Name="ExpenseAmountInBDT" ColumnName="ExpenseAmountInBDT" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="ExpensePurpose" ColumnName="ExpensePurpose" />
+          <ScalarProperty Name="ExpenseEntryDate" ColumnName="ExpenseEntryDate" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="AdvanceCategoryName" ColumnName="AdvanceCategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="BaseAdvanceCategoryName" ColumnName="BaseAdvanceCategoryName" />
+          <ScalarProperty Name="BaseAdvanceCategoryId" ColumnName="BaseAdvanceCategoryId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="RankId" ColumnName="RankId" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetRejectedRequisitionReport">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetRejectedRequisitionReport">
+        <MappingFragment StoreEntitySet="Advance_VW_GetRejectedRequisitionReport">
+          <ScalarProperty Name="RequisitionRejectionDate" ColumnName="RequisitionRejectionDate" />
+          <ScalarProperty Name="RequisitionRejectionRemarks" ColumnName="RequisitionRejectionRemarks" />
+          <ScalarProperty Name="RequisitionPlaceOfOccurrance" ColumnName="RequisitionPlaceOfOccurrance" />
+          <ScalarProperty Name="RequisitionRejectedBy" ColumnName="RequisitionRejectedBy" />
+          <ScalarProperty Name="RequisitionStatus" ColumnName="RequisitionStatus" />
+          <ScalarProperty Name="RequisitionStatusId" ColumnName="RequisitionStatusId" />
+          <ScalarProperty Name="ApprovalLevelName" ColumnName="ApprovalLevelName" />
+          <ScalarProperty Name="RequisitionApprovalDate" ColumnName="RequisitionApprovalDate" />
+          <ScalarProperty Name="RequisitionCurrency" ColumnName="RequisitionCurrency" />
+          <ScalarProperty Name="RequisitionConversionRate" ColumnName="RequisitionConversionRate" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="AdvanceCategoryName" ColumnName="AdvanceCategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="BaseAdvanceCategoryName" ColumnName="BaseAdvanceCategoryName" />
+          <ScalarProperty Name="BaseAdvanceCategoryId" ColumnName="BaseAdvanceCategoryId" />
+          <ScalarProperty Name="RequisitionPurpose" ColumnName="RequisitionPurpose" />
+          <ScalarProperty Name="RequisitionEntryDate" ColumnName="RequisitionEntryDate" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="RankId" ColumnName="RankId" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetRequisitionSignatory">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetRequisitionSignatory">
+        <MappingFragment StoreEntitySet="Advance_VW_GetRequisitionSignatory">
+          <ScalarProperty Name="SignatoryDesignation" ColumnName="SignatoryDesignation" />
+          <ScalarProperty Name="SignatoryName" ColumnName="SignatoryName" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetRequisitionSourceOfFund">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetRequisitionSourceOfFund">
+        <MappingFragment StoreEntitySet="Advance_VW_GetRequisitionSourceOfFund">
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="SourceOfFundName" ColumnName="SourceOfFundName" />
+          <ScalarProperty Name="SourceOfFundId" ColumnName="SourceOfFundId" />
+          <ScalarProperty Name="RequisitionHeaderId" ColumnName="RequisitionHeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetTimeLagForExpense">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetTimeLagForExpense">
+        <MappingFragment StoreEntitySet="Advance_VW_GetTimeLagForExpense">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="RequesterUserName" ColumnName="RequesterUserName" />
+          <ScalarProperty Name="ExpenseAmountInBDT" ColumnName="ExpenseAmountInBDT" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="PendingDays" ColumnName="PendingDays" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="ExpenseNo" ColumnName="ExpenseNo" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="LevelId" ColumnName="LevelId" />
+          <ScalarProperty Name="PanelName" ColumnName="PanelName" />
+          <ScalarProperty Name="PanelId" ColumnName="PanelId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advance_VW_GetTimeLagForRequisition">
+      <EntityTypeMapping TypeName="IDCOLAdvanceDBModel.Advance_VW_GetTimeLagForRequisition">
+        <MappingFragment StoreEntitySet="Advance_VW_GetTimeLagForRequisition">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="RequesterUserName" ColumnName="RequesterUserName" />
+          <ScalarProperty Name="AdvanceAmountInBDT" ColumnName="AdvanceAmountInBDT" />
+          <ScalarProperty Name="PendingDays" ColumnName="PendingDays" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AdvanceCategoryId" ColumnName="AdvanceCategoryId" />
+          <ScalarProperty Name="RequisitionNo" ColumnName="RequisitionNo" />
+          <ScalarProperty Name="RequisitionId" ColumnName="RequisitionId" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="LevelId" ColumnName="LevelId" />
+          <ScalarProperty Name="PanelName" ColumnName="PanelName" />
+          <ScalarProperty Name="PanelId" ColumnName="PanelId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

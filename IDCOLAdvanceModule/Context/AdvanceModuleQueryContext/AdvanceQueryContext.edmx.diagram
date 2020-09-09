@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2e5973d7360d4f7c90c14d87915640b8" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceExpense" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceExpenseDetail" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceRequisition" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceRequisitionDetail" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAgingReport" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetApprovalLevelMember" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetDesignationWithEmployeeCategory" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetEntitlementMappingSetting" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetExpenseSignatory" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetExpenseSourceOfFund" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetHeadOfDepartment" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetLocalTravelReport" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetPendingExpenseReport" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetPendingRequisitionReport" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRejectedExpenseReport" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRejectedRequisitionReport" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRequisitionSignatory" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRequisitionSourceOfFund" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetTimeLagForExpense" Width="1.5" PointX="16.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IDCOLAdvanceDBModel.Advance_VW_GetTimeLagForRequisition" Width="1.5" PointX="16.75" PointY="8.75" />
+      </Diagram>    
+      </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

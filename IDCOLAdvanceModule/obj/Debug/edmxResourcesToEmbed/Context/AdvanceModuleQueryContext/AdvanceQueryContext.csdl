@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IDCOLAdvanceDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AdvanceQueryContext" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Advance_SP_GetLocalTravelReport" ReturnType="Collection(IDCOLAdvanceDBModel.Advance_SP_GetLocalTravelReport)" />
+    <FunctionImport Name="Advance_SP_GetOverseasTravelReport" ReturnType="Collection(IDCOLAdvanceDBModel.Advance_SP_GetOverseasTravelReport)" />
+    <EntitySet Name="Advance_VW_GetAdvanceExpense" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceExpense" />
+    <EntitySet Name="Advance_VW_GetAdvanceExpenseDetail" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceExpenseDetail" />
+    <EntitySet Name="Advance_VW_GetAdvanceRequisition" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceRequisition" />
+    <EntitySet Name="Advance_VW_GetAdvanceRequisitionDetail" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAdvanceRequisitionDetail" />
+    <EntitySet Name="Advance_VW_GetAgingReport" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetAgingReport" />
+    <EntitySet Name="Advance_VW_GetApprovalLevelMember" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetApprovalLevelMember" />
+    <EntitySet Name="Advance_VW_GetDesignationWithEmployeeCategory" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetDesignationWithEmployeeCategory" />
+    <EntitySet Name="Advance_VW_GetEntitlementMappingSetting" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetEntitlementMappingSetting" />
+    <EntitySet Name="Advance_VW_GetExpenseSignatory" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetExpenseSignatory" />
+    <EntitySet Name="Advance_VW_GetExpenseSourceOfFund" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetExpenseSourceOfFund" />
+    <EntitySet Name="Advance_VW_GetHeadOfDepartment" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetHeadOfDepartment" />
+    <EntitySet Name="Advance_VW_GetLocalTravelReport" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetLocalTravelReport" />
+    <EntitySet Name="Advance_VW_GetPendingExpenseReport" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetPendingExpenseReport" />
+    <EntitySet Name="Advance_VW_GetPendingRequisitionReport" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetPendingRequisitionReport" />
+    <EntitySet Name="Advance_VW_GetRejectedExpenseReport" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRejectedExpenseReport" />
+    <EntitySet Name="Advance_VW_GetRejectedRequisitionReport" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRejectedRequisitionReport" />
+    <EntitySet Name="Advance_VW_GetRequisitionSignatory" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRequisitionSignatory" />
+    <EntitySet Name="Advance_VW_GetRequisitionSourceOfFund" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetRequisitionSourceOfFund" />
+    <EntitySet Name="Advance_VW_GetTimeLagForExpense" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetTimeLagForExpense" />
+    <EntitySet Name="Advance_VW_GetTimeLagForRequisition" EntityType="IDCOLAdvanceDBModel.Advance_VW_GetTimeLagForRequisition" />
+  </EntityContainer>
+  <ComplexType Name="Advance_SP_GetLocalTravelReport">
+    <Property Type="Guid" Name="Id" Nullable="true" />
+    <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="EmployeeUserName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="92" />
+    <Property Type="Int64" Name="RequisitionId" Nullable="false" />
+    <Property Type="String" Name="RequisitionNo" Nullable="true" />
+    <Property Type="String" Name="RequisitionPurpose" Nullable="true" />
+    <Property Type="String" Name="RequisitionPlace" Nullable="true" />
+    <Property Type="DateTime" Name="RequisitionFromDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="RequisitionToDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdvanceIssueDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="AdvanceAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="ExpenseId" Nullable="true" />
+    <Property Type="String" Name="ExpenseNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ExpensePurpose" Nullable="true" MaxLength="5000" />
+    <Property Type="String" Name="ExpensePlace" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ExpenseFromDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpenseToDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpenseIssueDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="ExpenseAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="DepartmentId" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Advance_SP_GetOverseasTravelReport">
+    <Property Type="Guid" Name="Id" Nullable="true" />
+    <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="EmployeeUserName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="92" />
+    <Property Type="Decimal" Name="DepartmentId" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="RequisitionId" Nullable="false" />
+    <Property Type="String" Name="RequisitionNo" Nullable="true" />
+    <Property Type="String" Name="RequisitionPurpose" Nullable="true" />
+    <Property Type="String" Name="RequisitionPlace" Nullable="true" />
+    <Property Type="String" Name="RequisitionCountryName" Nullable="true" />
+    <Property Type="DateTime" Name="RequisitionFromDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="RequisitionToDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdvanceIssueDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="AdvanceAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="ExpenseId" Nullable="true" />
+    <Property Type="String" Name="ExpenseNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ExpensePurpose" Nullable="true" MaxLength="5000" />
+    <Property Type="String" Name="ExpensePlace" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ExpenseCountryName" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ExpenseFromDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpenseToDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpenseIssueDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="ExpenseAmount" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <EntityType Name="Advance_VW_GetAdvanceExpense">
+    <Key>
+      <PropertyRef Name="HeaderId" />
+      <PropertyRef Name="AdvanceCategoryId" />
+      <PropertyRef Name="FromDate" />
+      <PropertyRef Name="ToDate" />
+      <PropertyRef Name="ConversionRate" />
+      <PropertyRef Name="NoOfDays" />
+      <PropertyRef Name="ExpenseEntryDate" />
+      <PropertyRef Name="AdvanceExpenseStatusId" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="AdvanceAmount" />
+      <PropertyRef Name="AdvanceAmountInBDT" />
+      <PropertyRef Name="ExpenseAmount" />
+      <PropertyRef Name="ExpenseAmountInBDT" />
+      <PropertyRef Name="IsPaid" />
+      <PropertyRef Name="IsReceived" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequesterUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="HeaderId" Type="Int64" Nullable="false" />
+    <Property Name="ExpenseNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseApprovalTicketId" Type="Int64" />
+    <Property Name="ApprovalStatusId" Type="Int64" />
+    <Property Name="AuthorizedOn" Type="DateTime" Precision="3" />
+    <Property Name="AdvanceCategoryId" Type="Int64" Nullable="false" />
+    <Property Name="AdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsCeilingApplicable" Type="Boolean" />
+    <Property Name="CeilingAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Currency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConversionRate" Type="Double" Nullable="false" />
+    <Property Name="NoOfDays" Type="Double" Nullable="false" />
+    <Property Name="Purpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdvanceExpenseStatusId" Type="Int64" Nullable="false" />
+    <Property Name="AdvanceExpenseStatusName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="RecommendedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendedOn" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeDepartmentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeDepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeRankID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeRankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceAmount" Type="Decimal" Nullable="false" Precision="38" Scale="2" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" Nullable="false" />
+    <Property Name="ExpenseAmount" Type="Decimal" Nullable="false" Precision="38" Scale="2" />
+    <Property Name="ExpenseAmountInBDT" Type="Double" Nullable="false" />
+    <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+    <Property Name="PaidBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="NoOfUnit" Type="Double" />
+    <Property Name="UnitCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalRevenue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AdvanceCorporateRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RejectedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RejectedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsReceived" Type="Boolean" Nullable="false" />
+    <Property Name="ReceivedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReceivedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetAdvanceExpenseDetail">
+    <Key>
+      <PropertyRef Name="UnitCost" />
+      <PropertyRef Name="AdvanceAmount" />
+      <PropertyRef Name="ExpenseAmount" />
+      <PropertyRef Name="IsThirdPartyReceipient" />
+      <PropertyRef Name="OverseasSponsorFinancedDetailAmount" />
+      <PropertyRef Name="TravelSponsorFinancedDetailAmount" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequesterUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="HeaderId" Type="Int64" />
+    <Property Name="ExpenseNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseApprovalTicketId" Type="Int64" />
+    <Property Name="ApprovalStatusId" Type="Int64" />
+    <Property Name="AuthorizedOn" Type="DateTime" Precision="3" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="AdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsCeilingApplicable" Type="Boolean" />
+    <Property Name="CeilingAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HeaderFromDate" Type="DateTime" Precision="3" />
+    <Property Name="HeaderToDate" Type="DateTime" Precision="3" />
+    <Property Name="HeaderCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HeaderConversionRate" Type="Double" />
+    <Property Name="NoOfDays" Type="Double" />
+    <Property Name="HeaderPurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseEntryDate" Type="DateTime" Precision="3" />
+    <Property Name="IsSponsorFinanced" Type="Boolean" />
+    <Property Name="IsOverseasSponsorFinanced" Type="Boolean" />
+    <Property Name="SponsorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OverseasSponsorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceExpenseStatusId" Type="Int64" />
+    <Property Name="AdvanceExpenseStatusName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="RecommendedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendedOn" Type="DateTime" Precision="3" />
+    <Property Name="PlaceOfEvent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorporateAdvisoryPlaceOfEvent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OverseasPlaceOfVisitId" Type="Int64" />
+    <Property Name="OverseasPlaceOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SourceOfFund" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeDepartmentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeDepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeRankID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeRankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsPaid" Type="Boolean" />
+    <Property Name="PaidBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="HeaderNoOfUnit" Type="Double" />
+    <Property Name="HeaderUnitCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalRevenue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AdvanceCorporateRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfUnit" Type="Double" />
+    <Property Name="UnitCost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DetailPurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="ExpenseAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ExpenseAmountInBDT" Type="Double" />
+    <Property Name="DetailRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TravelCostItemId" Type="Int64" />
+    <Property Name="DetailFromDate" Type="DateTime" Precision="3" />
+    <Property Name="DetailToDate" Type="DateTime" Precision="3" />
+    <Property Name="OverseasTravelCostItemId" Type="Int64" />
+    <Property Name="OverseasFromDate" Type="DateTime" Precision="3" />
+    <Property Name="OverseasToDate" Type="DateTime" Precision="3" />
+    <Property Name="ReceipientOrPayeeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsThirdPartyReceipient" Type="Boolean" Nullable="false" />
+    <Property Name="OverseasSponsorFinancedDetailAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TravelSponsorFinancedDetailAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DetailCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DetailConversionRate" Type="Double" />
+    <Property Name="VatTaxTypeId" Type="Int64" />
+    <Property Name="VatTaxTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseVoucherDetailId" Type="Int64" />
+    <Property Name="Justification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetAdvanceRequisition">
+    <Key>
+      <PropertyRef Name="HeaderId" />
+      <PropertyRef Name="AdvanceCategoryId" />
+      <PropertyRef Name="FromDate" />
+      <PropertyRef Name="ToDate" />
+      <PropertyRef Name="ConversionRate" />
+      <PropertyRef Name="NoOfDays" />
+      <PropertyRef Name="RequisitionDate" />
+      <PropertyRef Name="AdvanceRequisitionStatusId" />
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="AdvanceAmount" />
+      <PropertyRef Name="IsPaid" />
+      <PropertyRef Name="IsReceived" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequesterUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="HeaderId" Type="Int64" Nullable="false" />
+    <Property Name="RequisitionNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequistionApprovalTicketId" Type="Int64" />
+    <Property Name="ApprovalStatusId" Type="Int64" />
+    <Property Name="AuthorizedOn" Type="DateTime" Precision="3" />
+    <Property Name="AdvanceCategoryId" Type="Int64" Nullable="false" />
+    <Property Name="BaseAdvanceCategoryId" Type="Int64" />
+    <Property Name="RequisitionCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsCeilingApplicable" Type="Boolean" />
+    <Property Name="CeilingAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Currency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConversionRate" Type="Double" Nullable="false" />
+    <Property Name="NoOfDays" Type="Double" Nullable="false" />
+    <Property Name="Purpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsSponsorFinanced" Type="Boolean" />
+    <Property Name="SponsorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceRequisitionStatusId" Type="Int64" Nullable="false" />
+    <Property Name="RequisitionStatusName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="RecommendedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendedOn" Type="DateTime" Precision="3" />
+    <Property Name="RejectedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RejectedOn" Type="DateTime" Precision="3" />
+    <Property Name="PlaceOfEvent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SourceOfFund" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeDepartmentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeDepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeRankID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeRankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceAmount" Type="Decimal" Nullable="false" Precision="38" Scale="2" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+    <Property Name="PaidBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="AdvanceExpenseHeaderId" Type="Int64" />
+    <Property Name="NoOfUnit" Type="Double" />
+    <Property Name="UnitCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalRevenue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AdvanceCorporateRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsReceived" Type="Boolean" Nullable="false" />
+    <Property Name="ReceivedOn" Type="DateTime" Precision="3" />
+    <Property Name="ReceivedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetAdvanceRequisitionDetail">
+    <Key>
+      <PropertyRef Name="UnitCost" />
+      <PropertyRef Name="AdvanceAmount" />
+      <PropertyRef Name="IsThirdPartyReceipient" />
+      <PropertyRef Name="OverseasSponsorFinancedDetailAmount" />
+      <PropertyRef Name="TravelSponsorFinancedDetailAmount" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequesterUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="HeaderId" Type="Int64" />
+    <Property Name="RequisitionNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequistionApprovalTicketId" Type="Int64" />
+    <Property Name="ApprovalStatusId" Type="Int64" />
+    <Property Name="AuthorizedOn" Type="DateTime" Precision="3" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="BaseAdvanceCategoryId" Type="Int64" />
+    <Property Name="RequisitionCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsCeilingApplicable" Type="Boolean" />
+    <Property Name="CeilingAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HeaderFromDate" Type="DateTime" Precision="3" />
+    <Property Name="HeaderToDate" Type="DateTime" Precision="3" />
+    <Property Name="HeaderCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HeaderConversionRate" Type="Double" />
+    <Property Name="NoOfDays" Type="Double" />
+    <Property Name="HeaderPurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionDate" Type="DateTime" Precision="3" />
+    <Property Name="IsSponsorFinanced" Type="Boolean" />
+    <Property Name="IsOverseasSponsorFinanced" Type="Boolean" />
+    <Property Name="SponsorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OverseasSponsorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceRequisitionStatusId" Type="Int64" />
+    <Property Name="RequisitionStatusName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="RecommendedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendedOn" Type="DateTime" Precision="3" />
+    <Property Name="PlaceOfEvent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorporateAdvisoryPlaceOfEvent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OverseasPlaceOfVisitId" Type="Int64" />
+    <Property Name="OverseasPlaceOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SourceOfFund" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeDepartmentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeDepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeRankID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeRankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsPaid" Type="Boolean" />
+    <Property Name="PaidBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="AdvanceExpenseHeaderId" Type="Int64" />
+    <Property Name="HeaderNoOfUnit" Type="Double" />
+    <Property Name="HeaderUnitCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalRevenue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NoOfUnit" Type="Double" />
+    <Property Name="UnitCost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DetailPurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="DetailRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiscelleneousCostItemId" Type="Int64" />
+    <Property Name="TravelCostItemId" Type="Int64" />
+    <Property Name="DetailFromDate" Type="DateTime" Precision="3" />
+    <Property Name="DetailToDate" Type="DateTime" Precision="3" />
+    <Property Name="OverseasTravelCostItemId" Type="Int64" />
+    <Property Name="OverseasFromDate" Type="DateTime" Precision="3" />
+    <Property Name="OverseasToDate" Type="DateTime" Precision="3" />
+    <Property Name="ReceipientOrPayeeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsThirdPartyReceipient" Type="Boolean" Nullable="false" />
+    <Property Name="OverseasSponsorFinancedDetailAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TravelSponsorFinancedDetailAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DetailCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DetailConversionRate" Type="Double" />
+    <Property Name="VatTaxTypeId" Type="Int64" />
+    <Property Name="VatTaxTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionVoucherDetailId" Type="Int64" />
+    <Property Name="Justification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetAgingReport">
+    <Key>
+      <PropertyRef Name="RequisitionID" />
+      <PropertyRef Name="RequisitionEntryDate" />
+      <PropertyRef Name="RequisitionStatusId" />
+      <PropertyRef Name="IsAdvancePaid" />
+      <PropertyRef Name="IsExpensePaid" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequisitionID" Type="Int64" Nullable="false" />
+    <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RankID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceAmount" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="RequisitionEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpenseEntryDate" Type="DateTime" Precision="3" />
+    <Property Name="BaseAdvanceCategoryId" Type="Int64" />
+    <Property Name="BaseAdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="AdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseAmount" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="RequisitionConversionRate" Type="Double" />
+    <Property Name="RequisitionCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseAmountInBDT" Type="Double" />
+    <Property Name="ExpenseConversionRate" Type="Double" />
+    <Property Name="ExpenseCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionApprovalDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpenseApprovalDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprovalLevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionStatusId" Type="Int64" Nullable="false" />
+    <Property Name="AdvanceIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="Purpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionPlaceOfOccurrance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpensePlaceOfOccurrance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdjustedDate" Type="DateTime" Precision="3" />
+    <Property Name="DaysCount" Type="Int32" />
+    <Property Name="ExpenseStatusId" Type="Int64" />
+    <Property Name="ExpenseStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsAdvancePaid" Type="Boolean" Nullable="false" />
+    <Property Name="IsExpensePaid" Type="Boolean" Nullable="false" />
+    <Property Name="ExpenseIssueDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetApprovalLevelMember">
+    <Key>
+      <PropertyRef Name="ApprovalLevelMemberId" />
+      <PropertyRef Name="ApprovalLevelId" />
+      <PropertyRef Name="PriorityOrder" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="CreatedOn" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="ApprovalLevelMemberId" Type="Int64" Nullable="false" />
+    <Property Name="ApprovalLevelId" Type="Int64" Nullable="false" />
+    <Property Name="PriorityOrder" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeFullName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="RankID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetDesignationWithEmployeeCategory">
+    <Key>
+      <PropertyRef Name="RankID" />
+      <PropertyRef Name="RankName" />
+      <PropertyRef Name="IsActive" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RankID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="RankName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeCategoryId" Type="Int64" />
+    <Property Name="EmployeeCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeCategorySettingsId" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetEntitlementMappingSetting">
+    <Key>
+      <PropertyRef Name="DetailId" />
+      <PropertyRef Name="IsFullAmountEntitlement" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="HeaderId" Type="Int64" />
+    <Property Name="DetailId" Type="Int64" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="CostItemId" Type="Int64" />
+    <Property Name="CostItemName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RankId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EntitlementAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsFullAmountEntitlement" Type="Boolean" Nullable="false" />
+    <Property Name="IsEntitlementMandatory" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetExpenseSignatory">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="ExpenseId" Type="Int64" Nullable="false" />
+    <Property Name="LevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SignatoryName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="SignatoryDesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetExpenseSourceOfFund">
+    <Key>
+      <PropertyRef Name="Percentage" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="ExpenseHeaderId" Type="Int64" />
+    <Property Name="SourceOfFundId" Type="Int64" />
+    <Property Name="SourceOfFundName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Percentage" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetHeadOfDepartment">
+    <Key>
+      <PropertyRef Name="HODId" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="HeadOfDepartmentUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HeadOfDepartmentFullName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HODId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetLocalTravelReport">
+    <Key>
+      <PropertyRef Name="RequisitionId" />
+      <PropertyRef Name="RequisitionFromDate" />
+      <PropertyRef Name="RequisitionToDate" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionId" Type="Int64" Nullable="false" />
+    <Property Name="RequisitionNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionPurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionPlace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionFromDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RequisitionToDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdvanceIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="AdvanceAmount" Type="Double" />
+    <Property Name="ExpenseId" Type="Int64" />
+    <Property Name="ExpenseNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpensePurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpensePlace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseFromDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpenseToDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpenseIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpenseAmount" Type="Double" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetPendingExpenseReport">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+      <PropertyRef Name="ExpenseEntryDate" />
+      <PropertyRef Name="ExpenseConversionRate" />
+      <PropertyRef Name="ExpenseDaysCount" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RankId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BaseAdvanceCategoryId" Type="Int64" />
+    <Property Name="BaseAdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="AdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseId" Type="Int64" Nullable="false" />
+    <Property Name="ExpenseEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpensePurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseAmount" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="ExpenseAmountInBDT" Type="Double" />
+    <Property Name="ExpenseConversionRate" Type="Double" Nullable="false" />
+    <Property Name="ExpenseCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseApprovalDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpenseApprovalLevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseStatusId" Type="Int64" />
+    <Property Name="ExpenseStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpensePlaceOfOccurrance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseDaysCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetPendingRequisitionReport">
+    <Key>
+      <PropertyRef Name="RequisitionId" />
+      <PropertyRef Name="RequisitionEntryDate" />
+      <PropertyRef Name="RequisitionConversionRate" />
+      <PropertyRef Name="ExpenseDaysCount" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequisitionId" Type="Int64" Nullable="false" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RankId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceAmount" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="RequisitionEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RequisitionPurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BaseAdvanceCategoryId" Type="Int64" />
+    <Property Name="BaseAdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="AdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionConversionRate" Type="Double" Nullable="false" />
+    <Property Name="RequisitionCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionApprovalDate" Type="DateTime" Precision="3" />
+    <Property Name="RequisitionApprovalLevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionStatusId" Type="Int64" />
+    <Property Name="RequisitionStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionPlaceOfOccurrance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseDaysCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetRejectedExpenseReport">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+      <PropertyRef Name="ExpenseEntryDate" />
+      <PropertyRef Name="ExpenseConversionRate" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RankId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BaseAdvanceCategoryId" Type="Int64" />
+    <Property Name="BaseAdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="AdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseId" Type="Int64" Nullable="false" />
+    <Property Name="ExpenseEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpensePurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseAmount" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="ExpenseAmountInBDT" Type="Double" />
+    <Property Name="ExpenseConversionRate" Type="Double" Nullable="false" />
+    <Property Name="ExpenseCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseApprovalDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpenseApprovalLevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseStatusId" Type="Int64" />
+    <Property Name="ExpenseStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseRejectedBy" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="ExpensePlaceOfOccurrance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseRejectioinRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseRejectionDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetRejectedRequisitionReport">
+    <Key>
+      <PropertyRef Name="RequisitionId" />
+      <PropertyRef Name="RequisitionEntryDate" />
+      <PropertyRef Name="RequisitionConversionRate" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequisitionId" Type="Int64" Nullable="false" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RankId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionEntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RequisitionPurpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BaseAdvanceCategoryId" Type="Int64" />
+    <Property Name="BaseAdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="AdvanceCategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceAmount" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="RequisitionConversionRate" Type="Double" Nullable="false" />
+    <Property Name="RequisitionCurrency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionApprovalDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprovalLevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionStatusId" Type="Int64" />
+    <Property Name="RequisitionStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionRejectedBy" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionPlaceOfOccurrance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionRejectionRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionRejectionDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetRequisitionSignatory">
+    <Key>
+      <PropertyRef Name="RequisitionId" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequisitionId" Type="Int64" Nullable="false" />
+    <Property Name="LevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SignatoryName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+    <Property Name="SignatoryDesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetRequisitionSourceOfFund">
+    <Key>
+      <PropertyRef Name="Percentage" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="RequisitionHeaderId" Type="Int64" />
+    <Property Name="SourceOfFundId" Type="Int64" />
+    <Property Name="SourceOfFundName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Percentage" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetTimeLagForExpense">
+    <Key>
+      <PropertyRef Name="PanelId" />
+      <PropertyRef Name="ExpenseAmountInBDT" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="PanelId" Type="Int64" Nullable="false" />
+    <Property Name="PanelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LevelId" Type="Int64" />
+    <Property Name="LevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseId" Type="Int64" />
+    <Property Name="ExpenseNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PendingDays" Type="Int32" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="ExpenseAmountInBDT" Type="Double" Nullable="false" />
+    <Property Name="RequesterUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advance_VW_GetTimeLagForRequisition">
+    <Key>
+      <PropertyRef Name="PanelId" />
+    </Key>
+    <Property Name="Id" Type="Guid" />
+    <Property Name="PanelId" Type="Int64" Nullable="false" />
+    <Property Name="PanelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LevelId" Type="Int64" />
+    <Property Name="LevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequisitionId" Type="Int64" />
+    <Property Name="RequisitionNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdvanceCategoryId" Type="Int64" />
+    <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PendingDays" Type="Int32" />
+    <Property Name="AdvanceAmountInBDT" Type="Double" />
+    <Property Name="RequesterUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" MaxLength="92" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

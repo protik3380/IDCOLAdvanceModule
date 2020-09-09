@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IDCOLAdvanceDBDataSet" targetNamespace="http://tempuri.org/IDCOLAdvanceDBDataSet.xsd" xmlns:mstns="http://tempuri.org/IDCOLAdvanceDBDataSet.xsd" xmlns="http://tempuri.org/IDCOLAdvanceDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="IDCOLAdvanceDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="IDCOLAdvanceDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.IDCOLAdvanceModule.Properties.Settings.GlobalReference.Default.IDCOLAdvanceDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Advance_VW_GetRequisitionSourceOfFundTableAdapter" GeneratorDataComponentClassName="Advance_VW_GetRequisitionSourceOfFundTableAdapter" Name="Advance_VW_GetRequisitionSourceOfFund" UserDataComponentName="Advance_VW_GetRequisitionSourceOfFundTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IDCOLAdvanceDBConnectionString (Settings)" DbObjectName="IDCOLAdvanceDB.dbo.Advance_VW_GetRequisitionSourceOfFund" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, RequisitionHeaderId, SourceOfFundId, SourceOfFundName, Percentage FROM dbo.Advance_VW_GetRequisitionSourceOfFund</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="RequisitionHeaderId" DataSetColumn="RequisitionHeaderId" />
+              <Mapping SourceColumn="SourceOfFundId" DataSetColumn="SourceOfFundId" />
+              <Mapping SourceColumn="SourceOfFundName" DataSetColumn="SourceOfFundName" />
+              <Mapping SourceColumn="Percentage" DataSetColumn="Percentage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Advance_VW_GetExpenseSourceOfFundTableAdapter" GeneratorDataComponentClassName="Advance_VW_GetExpenseSourceOfFundTableAdapter" Name="Advance_VW_GetExpenseSourceOfFund" UserDataComponentName="Advance_VW_GetExpenseSourceOfFundTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IDCOLAdvanceDBConnectionString (Settings)" DbObjectName="IDCOLAdvanceDB.dbo.Advance_VW_GetExpenseSourceOfFund" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, ExpenseHeaderId, SourceOfFundId, SourceOfFundName, Percentage FROM dbo.Advance_VW_GetExpenseSourceOfFund</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="ExpenseHeaderId" DataSetColumn="ExpenseHeaderId" />
+              <Mapping SourceColumn="SourceOfFundId" DataSetColumn="SourceOfFundId" />
+              <Mapping SourceColumn="SourceOfFundName" DataSetColumn="SourceOfFundName" />
+              <Mapping SourceColumn="Percentage" DataSetColumn="Percentage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Advance_VW_GetRequisitionSignatoryTableAdapter" GeneratorDataComponentClassName="Advance_VW_GetRequisitionSignatoryTableAdapter" Name="Advance_VW_GetRequisitionSignatory" UserDataComponentName="Advance_VW_GetRequisitionSignatoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IDCOLAdvanceDBConnectionString (Settings)" DbObjectName="IDCOLAdvanceDB.dbo.Advance_VW_GetRequisitionSignatory" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, RequisitionId, LevelName, SignatoryName, SignatoryDesignation FROM dbo.Advance_VW_GetRequisitionSignatory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="RequisitionId" DataSetColumn="RequisitionId" />
+              <Mapping SourceColumn="LevelName" DataSetColumn="LevelName" />
+              <Mapping SourceColumn="SignatoryName" DataSetColumn="SignatoryName" />
+              <Mapping SourceColumn="SignatoryDesignation" DataSetColumn="SignatoryDesignation" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Advance_VW_GetExpenseSignatoryTableAdapter" GeneratorDataComponentClassName="Advance_VW_GetExpenseSignatoryTableAdapter" Name="Advance_VW_GetExpenseSignatory" UserDataComponentName="Advance_VW_GetExpenseSignatoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IDCOLAdvanceDBConnectionString (Settings)" DbObjectName="IDCOLAdvanceDB.dbo.Advance_VW_GetExpenseSignatory" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, ExpenseId, LevelName, SignatoryName, SignatoryDesignation FROM dbo.Advance_VW_GetExpenseSignatory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="ExpenseId" DataSetColumn="ExpenseId" />
+              <Mapping SourceColumn="LevelName" DataSetColumn="LevelName" />
+              <Mapping SourceColumn="SignatoryName" DataSetColumn="SignatoryName" />
+              <Mapping SourceColumn="SignatoryDesignation" DataSetColumn="SignatoryDesignation" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Advance_VW_GetLocalTravelReportTableAdapter" GeneratorDataComponentClassName="Advance_VW_GetLocalTravelReportTableAdapter" Name="Advance_VW_GetLocalTravelReport" UserDataComponentName="Advance_VW_GetLocalTravelReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IDCOLAdvanceDBConnectionString (Settings)" DbObjectName="IDCOLAdvanceDB.dbo.Advance_VW_GetLocalTravelReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, EmployeeId, EmployeeUserName, EmployeeName, DepartmentId, DepartmentName, RequisitionId, RequisitionNo, RequisitionPurpose, RequisitionPlace, RequisitionFromDate, RequisitionToDate, AdvanceIssueDate, AdvanceAmount, ExpenseId, ExpenseNo, ExpensePurpose, ExpensePlace, ExpenseFromDate, ExpenseToDate, ExpenseIssueDate, ExpenseAmount FROM dbo.Advance_VW_GetLocalTravelReport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="EmployeeId" DataSetColumn="EmployeeId" />
+              <Mapping SourceColumn="EmployeeUserName" DataSetColumn="EmployeeUserName" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="RequisitionId" DataSetColumn="RequisitionId" />
+              <Mapping SourceColumn="RequisitionNo" DataSetColumn="RequisitionNo" />
+              <Mapping SourceColumn="RequisitionPurpose" DataSetColumn="RequisitionPurpose" />
+              <Mapping SourceColumn="RequisitionPlace" DataSetColumn="RequisitionPlace" />
+              <Mapping SourceColumn="RequisitionFromDate" DataSetColumn="RequisitionFromDate" />
+              <Mapping SourceColumn="RequisitionToDate" DataSetColumn="RequisitionToDate" />
+              <Mapping SourceColumn="AdvanceIssueDate" DataSetColumn="AdvanceIssueDate" />
+              <Mapping SourceColumn="AdvanceAmount" DataSetColumn="AdvanceAmount" />
+              <Mapping SourceColumn="ExpenseId" DataSetColumn="ExpenseId" />
+              <Mapping SourceColumn="ExpenseNo" DataSetColumn="ExpenseNo" />
+              <Mapping SourceColumn="ExpensePurpose" DataSetColumn="ExpensePurpose" />
+              <Mapping SourceColumn="ExpensePlace" DataSetColumn="ExpensePlace" />
+              <Mapping SourceColumn="ExpenseFromDate" DataSetColumn="ExpenseFromDate" />
+              <Mapping SourceColumn="ExpenseToDate" DataSetColumn="ExpenseToDate" />
+              <Mapping SourceColumn="ExpenseIssueDate" DataSetColumn="ExpenseIssueDate" />
+              <Mapping SourceColumn="ExpenseAmount" DataSetColumn="ExpenseAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Advance_SP_GetLocalTravelReportTableAdapter" GeneratorDataComponentClassName="Advance_SP_GetLocalTravelReportTableAdapter" Name="Advance_SP_GetLocalTravelReport" UserDataComponentName="Advance_SP_GetLocalTravelReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IDCOLAdvanceDBConnectionString (Settings)" DbObjectName="IDCOLAdvanceDB.dbo.Advance_SP_GetLocalTravelReport" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.Advance_SP_GetLocalTravelReport</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="EmployeeId" DataSetColumn="EmployeeId" />
+              <Mapping SourceColumn="EmployeeUserName" DataSetColumn="EmployeeUserName" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="RequisitionId" DataSetColumn="RequisitionId" />
+              <Mapping SourceColumn="RequisitionNo" DataSetColumn="RequisitionNo" />
+              <Mapping SourceColumn="RequisitionPurpose" DataSetColumn="RequisitionPurpose" />
+              <Mapping SourceColumn="RequisitionPlace" DataSetColumn="RequisitionPlace" />
+              <Mapping SourceColumn="RequisitionFromDate" DataSetColumn="RequisitionFromDate" />
+              <Mapping SourceColumn="RequisitionToDate" DataSetColumn="RequisitionToDate" />
+              <Mapping SourceColumn="AdvanceIssueDate" DataSetColumn="AdvanceIssueDate" />
+              <Mapping SourceColumn="AdvanceAmount" DataSetColumn="AdvanceAmount" />
+              <Mapping SourceColumn="ExpenseId" DataSetColumn="ExpenseId" />
+              <Mapping SourceColumn="ExpenseNo" DataSetColumn="ExpenseNo" />
+              <Mapping SourceColumn="ExpensePurpose" DataSetColumn="ExpensePurpose" />
+              <Mapping SourceColumn="ExpensePlace" DataSetColumn="ExpensePlace" />
+              <Mapping SourceColumn="ExpenseFromDate" DataSetColumn="ExpenseFromDate" />
+              <Mapping SourceColumn="ExpenseToDate" DataSetColumn="ExpenseToDate" />
+              <Mapping SourceColumn="ExpenseIssueDate" DataSetColumn="ExpenseIssueDate" />
+              <Mapping SourceColumn="ExpenseAmount" DataSetColumn="ExpenseAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Advance_SP_GetOverseasTravelReportTableAdapter" GeneratorDataComponentClassName="Advance_SP_GetOverseasTravelReportTableAdapter" Name="Advance_SP_GetOverseasTravelReport" UserDataComponentName="Advance_SP_GetOverseasTravelReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IDCOLAdvanceDBConnectionString (Settings)" DbObjectName="IDCOLAdvanceDB.dbo.Advance_SP_GetOverseasTravelReport" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.Advance_SP_GetOverseasTravelReport</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="EmployeeId" DataSetColumn="EmployeeId" />
+              <Mapping SourceColumn="EmployeeUserName" DataSetColumn="EmployeeUserName" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="RequisitionId" DataSetColumn="RequisitionId" />
+              <Mapping SourceColumn="RequisitionNo" DataSetColumn="RequisitionNo" />
+              <Mapping SourceColumn="RequisitionPurpose" DataSetColumn="RequisitionPurpose" />
+              <Mapping SourceColumn="RequisitionPlace" DataSetColumn="RequisitionPlace" />
+              <Mapping SourceColumn="RequisitionCountryName" DataSetColumn="RequisitionCountryName" />
+              <Mapping SourceColumn="RequisitionFromDate" DataSetColumn="RequisitionFromDate" />
+              <Mapping SourceColumn="RequisitionToDate" DataSetColumn="RequisitionToDate" />
+              <Mapping SourceColumn="AdvanceIssueDate" DataSetColumn="AdvanceIssueDate" />
+              <Mapping SourceColumn="AdvanceAmount" DataSetColumn="AdvanceAmount" />
+              <Mapping SourceColumn="ExpenseId" DataSetColumn="ExpenseId" />
+              <Mapping SourceColumn="ExpenseNo" DataSetColumn="ExpenseNo" />
+              <Mapping SourceColumn="ExpensePurpose" DataSetColumn="ExpensePurpose" />
+              <Mapping SourceColumn="ExpensePlace" DataSetColumn="ExpensePlace" />
+              <Mapping SourceColumn="ExpenseCountryName" DataSetColumn="ExpenseCountryName" />
+              <Mapping SourceColumn="ExpenseFromDate" DataSetColumn="ExpenseFromDate" />
+              <Mapping SourceColumn="ExpenseToDate" DataSetColumn="ExpenseToDate" />
+              <Mapping SourceColumn="ExpenseIssueDate" DataSetColumn="ExpenseIssueDate" />
+              <Mapping SourceColumn="ExpenseAmount" DataSetColumn="ExpenseAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IDCOLAdvanceDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="IDCOLAdvanceDBDataSet" msprop:Generator_UserDSName="IDCOLAdvanceDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Advance_VW_GetRequisitionSourceOfFund" msprop:Generator_TableClassName="Advance_VW_GetRequisitionSourceOfFundDataTable" msprop:Generator_TableVarName="tableAdvance_VW_GetRequisitionSourceOfFund" msprop:Generator_TablePropName="Advance_VW_GetRequisitionSourceOfFund" msprop:Generator_RowDeletingName="Advance_VW_GetRequisitionSourceOfFundRowDeleting" msprop:Generator_RowChangingName="Advance_VW_GetRequisitionSourceOfFundRowChanging" msprop:Generator_RowEvHandlerName="Advance_VW_GetRequisitionSourceOfFundRowChangeEventHandler" msprop:Generator_RowDeletedName="Advance_VW_GetRequisitionSourceOfFundRowDeleted" msprop:Generator_UserTableName="Advance_VW_GetRequisitionSourceOfFund" msprop:Generator_RowChangedName="Advance_VW_GetRequisitionSourceOfFundRowChanged" msprop:Generator_RowEvArgName="Advance_VW_GetRequisitionSourceOfFundRowChangeEvent" msprop:Generator_RowClassName="Advance_VW_GetRequisitionSourceOfFundRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="RequisitionHeaderId" msprop:Generator_ColumnVarNameInTable="columnRequisitionHeaderId" msprop:Generator_ColumnPropNameInRow="RequisitionHeaderId" msprop:Generator_ColumnPropNameInTable="RequisitionHeaderIdColumn" msprop:Generator_UserColumnName="RequisitionHeaderId" type="xs:long" minOccurs="0" />
+              <xs:element name="SourceOfFundId" msprop:Generator_ColumnVarNameInTable="columnSourceOfFundId" msprop:Generator_ColumnPropNameInRow="SourceOfFundId" msprop:Generator_ColumnPropNameInTable="SourceOfFundIdColumn" msprop:Generator_UserColumnName="SourceOfFundId" type="xs:long" minOccurs="0" />
+              <xs:element name="SourceOfFundName" msprop:Generator_ColumnVarNameInTable="columnSourceOfFundName" msprop:Generator_ColumnPropNameInRow="SourceOfFundName" msprop:Generator_ColumnPropNameInTable="SourceOfFundNameColumn" msprop:Generator_UserColumnName="SourceOfFundName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percentage" msprop:Generator_ColumnVarNameInTable="columnPercentage" msprop:Generator_ColumnPropNameInRow="Percentage" msprop:Generator_ColumnPropNameInTable="PercentageColumn" msprop:Generator_UserColumnName="Percentage" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Advance_VW_GetExpenseSourceOfFund" msprop:Generator_TableClassName="Advance_VW_GetExpenseSourceOfFundDataTable" msprop:Generator_TableVarName="tableAdvance_VW_GetExpenseSourceOfFund" msprop:Generator_RowChangedName="Advance_VW_GetExpenseSourceOfFundRowChanged" msprop:Generator_TablePropName="Advance_VW_GetExpenseSourceOfFund" msprop:Generator_RowDeletingName="Advance_VW_GetExpenseSourceOfFundRowDeleting" msprop:Generator_RowChangingName="Advance_VW_GetExpenseSourceOfFundRowChanging" msprop:Generator_RowEvHandlerName="Advance_VW_GetExpenseSourceOfFundRowChangeEventHandler" msprop:Generator_RowDeletedName="Advance_VW_GetExpenseSourceOfFundRowDeleted" msprop:Generator_RowClassName="Advance_VW_GetExpenseSourceOfFundRow" msprop:Generator_UserTableName="Advance_VW_GetExpenseSourceOfFund" msprop:Generator_RowEvArgName="Advance_VW_GetExpenseSourceOfFundRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="ExpenseHeaderId" msprop:Generator_ColumnVarNameInTable="columnExpenseHeaderId" msprop:Generator_ColumnPropNameInRow="ExpenseHeaderId" msprop:Generator_ColumnPropNameInTable="ExpenseHeaderIdColumn" msprop:Generator_UserColumnName="ExpenseHeaderId" type="xs:long" minOccurs="0" />
+              <xs:element name="SourceOfFundId" msprop:Generator_ColumnVarNameInTable="columnSourceOfFundId" msprop:Generator_ColumnPropNameInRow="SourceOfFundId" msprop:Generator_ColumnPropNameInTable="SourceOfFundIdColumn" msprop:Generator_UserColumnName="SourceOfFundId" type="xs:long" minOccurs="0" />
+              <xs:element name="SourceOfFundName" msprop:Generator_ColumnVarNameInTable="columnSourceOfFundName" msprop:Generator_ColumnPropNameInRow="SourceOfFundName" msprop:Generator_ColumnPropNameInTable="SourceOfFundNameColumn" msprop:Generator_UserColumnName="SourceOfFundName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percentage" msprop:Generator_ColumnVarNameInTable="columnPercentage" msprop:Generator_ColumnPropNameInRow="Percentage" msprop:Generator_ColumnPropNameInTable="PercentageColumn" msprop:Generator_UserColumnName="Percentage" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Advance_VW_GetRequisitionSignatory" msprop:Generator_TableClassName="Advance_VW_GetRequisitionSignatoryDataTable" msprop:Generator_TableVarName="tableAdvance_VW_GetRequisitionSignatory" msprop:Generator_TablePropName="Advance_VW_GetRequisitionSignatory" msprop:Generator_RowDeletingName="Advance_VW_GetRequisitionSignatoryRowDeleting" msprop:Generator_RowChangingName="Advance_VW_GetRequisitionSignatoryRowChanging" msprop:Generator_RowEvHandlerName="Advance_VW_GetRequisitionSignatoryRowChangeEventHandler" msprop:Generator_RowDeletedName="Advance_VW_GetRequisitionSignatoryRowDeleted" msprop:Generator_UserTableName="Advance_VW_GetRequisitionSignatory" msprop:Generator_RowChangedName="Advance_VW_GetRequisitionSignatoryRowChanged" msprop:Generator_RowEvArgName="Advance_VW_GetRequisitionSignatoryRowChangeEvent" msprop:Generator_RowClassName="Advance_VW_GetRequisitionSignatoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="RequisitionId" msprop:Generator_ColumnVarNameInTable="columnRequisitionId" msprop:Generator_ColumnPropNameInRow="RequisitionId" msprop:Generator_ColumnPropNameInTable="RequisitionIdColumn" msprop:Generator_UserColumnName="RequisitionId" type="xs:long" />
+              <xs:element name="LevelName" msprop:Generator_ColumnVarNameInTable="columnLevelName" msprop:Generator_ColumnPropNameInRow="LevelName" msprop:Generator_ColumnPropNameInTable="LevelNameColumn" msprop:Generator_UserColumnName="LevelName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SignatoryName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSignatoryName" msprop:Generator_ColumnPropNameInRow="SignatoryName" msprop:Generator_ColumnPropNameInTable="SignatoryNameColumn" msprop:Generator_UserColumnName="SignatoryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SignatoryDesignation" msprop:Generator_ColumnVarNameInTable="columnSignatoryDesignation" msprop:Generator_ColumnPropNameInRow="SignatoryDesignation" msprop:Generator_ColumnPropNameInTable="SignatoryDesignationColumn" msprop:Generator_UserColumnName="SignatoryDesignation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Advance_VW_GetExpenseSignatory" msprop:Generator_TableClassName="Advance_VW_GetExpenseSignatoryDataTable" msprop:Generator_TableVarName="tableAdvance_VW_GetExpenseSignatory" msprop:Generator_TablePropName="Advance_VW_GetExpenseSignatory" msprop:Generator_RowDeletingName="Advance_VW_GetExpenseSignatoryRowDeleting" msprop:Generator_RowChangingName="Advance_VW_GetExpenseSignatoryRowChanging" msprop:Generator_RowEvHandlerName="Advance_VW_GetExpenseSignatoryRowChangeEventHandler" msprop:Generator_RowDeletedName="Advance_VW_GetExpenseSignatoryRowDeleted" msprop:Generator_UserTableName="Advance_VW_GetExpenseSignatory" msprop:Generator_RowChangedName="Advance_VW_GetExpenseSignatoryRowChanged" msprop:Generator_RowEvArgName="Advance_VW_GetExpenseSignatoryRowChangeEvent" msprop:Generator_RowClassName="Advance_VW_GetExpenseSignatoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="ExpenseId" msprop:Generator_ColumnVarNameInTable="columnExpenseId" msprop:Generator_ColumnPropNameInRow="ExpenseId" msprop:Generator_ColumnPropNameInTable="ExpenseIdColumn" msprop:Generator_UserColumnName="ExpenseId" type="xs:long" />
+              <xs:element name="LevelName" msprop:Generator_ColumnVarNameInTable="columnLevelName" msprop:Generator_ColumnPropNameInRow="LevelName" msprop:Generator_ColumnPropNameInTable="LevelNameColumn" msprop:Generator_UserColumnName="LevelName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SignatoryName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSignatoryName" msprop:Generator_ColumnPropNameInRow="SignatoryName" msprop:Generator_ColumnPropNameInTable="SignatoryNameColumn" msprop:Generator_UserColumnName="SignatoryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SignatoryDesignation" msprop:Generator_ColumnVarNameInTable="columnSignatoryDesignation" msprop:Generator_ColumnPropNameInRow="SignatoryDesignation" msprop:Generator_ColumnPropNameInTable="SignatoryDesignationColumn" msprop:Generator_UserColumnName="SignatoryDesignation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Advance_VW_GetLocalTravelReport" msprop:Generator_TableClassName="Advance_VW_GetLocalTravelReportDataTable" msprop:Generator_TableVarName="tableAdvance_VW_GetLocalTravelReport" msprop:Generator_RowChangedName="Advance_VW_GetLocalTravelReportRowChanged" msprop:Generator_TablePropName="Advance_VW_GetLocalTravelReport" msprop:Generator_RowDeletingName="Advance_VW_GetLocalTravelReportRowDeleting" msprop:Generator_RowChangingName="Advance_VW_GetLocalTravelReportRowChanging" msprop:Generator_RowEvHandlerName="Advance_VW_GetLocalTravelReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Advance_VW_GetLocalTravelReportRowDeleted" msprop:Generator_RowClassName="Advance_VW_GetLocalTravelReportRow" msprop:Generator_UserTableName="Advance_VW_GetLocalTravelReport" msprop:Generator_RowEvArgName="Advance_VW_GetLocalTravelReportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeId" msprop:Generator_ColumnVarNameInTable="columnEmployeeId" msprop:Generator_ColumnPropNameInRow="EmployeeId" msprop:Generator_ColumnPropNameInTable="EmployeeIdColumn" msprop:Generator_UserColumnName="EmployeeId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeUserName" msprop:Generator_ColumnVarNameInTable="columnEmployeeUserName" msprop:Generator_ColumnPropNameInRow="EmployeeUserName" msprop:Generator_ColumnPropNameInTable="EmployeeUserNameColumn" msprop:Generator_UserColumnName="EmployeeUserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentId" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionId" msprop:Generator_ColumnVarNameInTable="columnRequisitionId" msprop:Generator_ColumnPropNameInRow="RequisitionId" msprop:Generator_ColumnPropNameInTable="RequisitionIdColumn" msprop:Generator_UserColumnName="RequisitionId" type="xs:long" />
+              <xs:element name="RequisitionNo" msprop:Generator_ColumnVarNameInTable="columnRequisitionNo" msprop:Generator_ColumnPropNameInRow="RequisitionNo" msprop:Generator_ColumnPropNameInTable="RequisitionNoColumn" msprop:Generator_UserColumnName="RequisitionNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionPurpose" msprop:Generator_ColumnVarNameInTable="columnRequisitionPurpose" msprop:Generator_ColumnPropNameInRow="RequisitionPurpose" msprop:Generator_ColumnPropNameInTable="RequisitionPurposeColumn" msprop:Generator_UserColumnName="RequisitionPurpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionPlace" msprop:Generator_ColumnVarNameInTable="columnRequisitionPlace" msprop:Generator_ColumnPropNameInRow="RequisitionPlace" msprop:Generator_ColumnPropNameInTable="RequisitionPlaceColumn" msprop:Generator_UserColumnName="RequisitionPlace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionFromDate" msprop:Generator_ColumnVarNameInTable="columnRequisitionFromDate" msprop:Generator_ColumnPropNameInRow="RequisitionFromDate" msprop:Generator_ColumnPropNameInTable="RequisitionFromDateColumn" msprop:Generator_UserColumnName="RequisitionFromDate" type="xs:dateTime" />
+              <xs:element name="RequisitionToDate" msprop:Generator_ColumnVarNameInTable="columnRequisitionToDate" msprop:Generator_ColumnPropNameInRow="RequisitionToDate" msprop:Generator_ColumnPropNameInTable="RequisitionToDateColumn" msprop:Generator_UserColumnName="RequisitionToDate" type="xs:dateTime" />
+              <xs:element name="AdvanceIssueDate" msprop:Generator_ColumnVarNameInTable="columnAdvanceIssueDate" msprop:Generator_ColumnPropNameInRow="AdvanceIssueDate" msprop:Generator_ColumnPropNameInTable="AdvanceIssueDateColumn" msprop:Generator_UserColumnName="AdvanceIssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AdvanceAmount" msprop:Generator_ColumnVarNameInTable="columnAdvanceAmount" msprop:Generator_ColumnPropNameInRow="AdvanceAmount" msprop:Generator_ColumnPropNameInTable="AdvanceAmountColumn" msprop:Generator_UserColumnName="AdvanceAmount" type="xs:double" minOccurs="0" />
+              <xs:element name="ExpenseId" msprop:Generator_ColumnVarNameInTable="columnExpenseId" msprop:Generator_ColumnPropNameInRow="ExpenseId" msprop:Generator_ColumnPropNameInTable="ExpenseIdColumn" msprop:Generator_UserColumnName="ExpenseId" type="xs:long" minOccurs="0" />
+              <xs:element name="ExpenseNo" msprop:Generator_ColumnVarNameInTable="columnExpenseNo" msprop:Generator_ColumnPropNameInRow="ExpenseNo" msprop:Generator_ColumnPropNameInTable="ExpenseNoColumn" msprop:Generator_UserColumnName="ExpenseNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpensePurpose" msprop:Generator_ColumnVarNameInTable="columnExpensePurpose" msprop:Generator_ColumnPropNameInRow="ExpensePurpose" msprop:Generator_ColumnPropNameInTable="ExpensePurposeColumn" msprop:Generator_UserColumnName="ExpensePurpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpensePlace" msprop:Generator_ColumnVarNameInTable="columnExpensePlace" msprop:Generator_ColumnPropNameInRow="ExpensePlace" msprop:Generator_ColumnPropNameInTable="ExpensePlaceColumn" msprop:Generator_UserColumnName="ExpensePlace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpenseFromDate" msprop:Generator_ColumnVarNameInTable="columnExpenseFromDate" msprop:Generator_ColumnPropNameInRow="ExpenseFromDate" msprop:Generator_ColumnPropNameInTable="ExpenseFromDateColumn" msprop:Generator_UserColumnName="ExpenseFromDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseToDate" msprop:Generator_ColumnVarNameInTable="columnExpenseToDate" msprop:Generator_ColumnPropNameInRow="ExpenseToDate" msprop:Generator_ColumnPropNameInTable="ExpenseToDateColumn" msprop:Generator_UserColumnName="ExpenseToDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseIssueDate" msprop:Generator_ColumnVarNameInTable="columnExpenseIssueDate" msprop:Generator_ColumnPropNameInRow="ExpenseIssueDate" msprop:Generator_ColumnPropNameInTable="ExpenseIssueDateColumn" msprop:Generator_UserColumnName="ExpenseIssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseAmount" msprop:Generator_ColumnVarNameInTable="columnExpenseAmount" msprop:Generator_ColumnPropNameInRow="ExpenseAmount" msprop:Generator_ColumnPropNameInTable="ExpenseAmountColumn" msprop:Generator_UserColumnName="ExpenseAmount" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Advance_SP_GetLocalTravelReport" msprop:Generator_TableClassName="Advance_SP_GetLocalTravelReportDataTable" msprop:Generator_TableVarName="tableAdvance_SP_GetLocalTravelReport" msprop:Generator_RowChangedName="Advance_SP_GetLocalTravelReportRowChanged" msprop:Generator_TablePropName="Advance_SP_GetLocalTravelReport" msprop:Generator_RowDeletingName="Advance_SP_GetLocalTravelReportRowDeleting" msprop:Generator_RowChangingName="Advance_SP_GetLocalTravelReportRowChanging" msprop:Generator_RowEvHandlerName="Advance_SP_GetLocalTravelReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Advance_SP_GetLocalTravelReportRowDeleted" msprop:Generator_RowClassName="Advance_SP_GetLocalTravelReportRow" msprop:Generator_UserTableName="Advance_SP_GetLocalTravelReport" msprop:Generator_RowEvArgName="Advance_SP_GetLocalTravelReportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeId" msprop:Generator_ColumnVarNameInTable="columnEmployeeId" msprop:Generator_ColumnPropNameInRow="EmployeeId" msprop:Generator_ColumnPropNameInTable="EmployeeIdColumn" msprop:Generator_UserColumnName="EmployeeId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeUserName" msprop:Generator_ColumnVarNameInTable="columnEmployeeUserName" msprop:Generator_ColumnPropNameInRow="EmployeeUserName" msprop:Generator_ColumnPropNameInTable="EmployeeUserNameColumn" msprop:Generator_UserColumnName="EmployeeUserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnRequisitionId" msprop:Generator_ColumnPropNameInRow="RequisitionId" msprop:Generator_ColumnPropNameInTable="RequisitionIdColumn" msprop:Generator_UserColumnName="RequisitionId" type="xs:long" />
+              <xs:element name="RequisitionNo" msprop:Generator_ColumnVarNameInTable="columnRequisitionNo" msprop:Generator_ColumnPropNameInRow="RequisitionNo" msprop:Generator_ColumnPropNameInTable="RequisitionNoColumn" msprop:Generator_UserColumnName="RequisitionNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionPurpose" msprop:Generator_ColumnVarNameInTable="columnRequisitionPurpose" msprop:Generator_ColumnPropNameInRow="RequisitionPurpose" msprop:Generator_ColumnPropNameInTable="RequisitionPurposeColumn" msprop:Generator_UserColumnName="RequisitionPurpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionPlace" msprop:Generator_ColumnVarNameInTable="columnRequisitionPlace" msprop:Generator_ColumnPropNameInRow="RequisitionPlace" msprop:Generator_ColumnPropNameInTable="RequisitionPlaceColumn" msprop:Generator_UserColumnName="RequisitionPlace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionFromDate" msprop:Generator_ColumnVarNameInTable="columnRequisitionFromDate" msprop:Generator_ColumnPropNameInRow="RequisitionFromDate" msprop:Generator_ColumnPropNameInTable="RequisitionFromDateColumn" msprop:Generator_UserColumnName="RequisitionFromDate" type="xs:dateTime" />
+              <xs:element name="RequisitionToDate" msprop:Generator_ColumnVarNameInTable="columnRequisitionToDate" msprop:Generator_ColumnPropNameInRow="RequisitionToDate" msprop:Generator_ColumnPropNameInTable="RequisitionToDateColumn" msprop:Generator_UserColumnName="RequisitionToDate" type="xs:dateTime" />
+              <xs:element name="AdvanceIssueDate" msprop:Generator_ColumnVarNameInTable="columnAdvanceIssueDate" msprop:Generator_ColumnPropNameInRow="AdvanceIssueDate" msprop:Generator_ColumnPropNameInTable="AdvanceIssueDateColumn" msprop:Generator_UserColumnName="AdvanceIssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AdvanceAmount" msprop:Generator_ColumnVarNameInTable="columnAdvanceAmount" msprop:Generator_ColumnPropNameInRow="AdvanceAmount" msprop:Generator_ColumnPropNameInTable="AdvanceAmountColumn" msprop:Generator_UserColumnName="AdvanceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExpenseId" msprop:Generator_ColumnVarNameInTable="columnExpenseId" msprop:Generator_ColumnPropNameInRow="ExpenseId" msprop:Generator_ColumnPropNameInTable="ExpenseIdColumn" msprop:Generator_UserColumnName="ExpenseId" type="xs:long" minOccurs="0" />
+              <xs:element name="ExpenseNo" msprop:Generator_ColumnVarNameInTable="columnExpenseNo" msprop:Generator_ColumnPropNameInRow="ExpenseNo" msprop:Generator_ColumnPropNameInTable="ExpenseNoColumn" msprop:Generator_UserColumnName="ExpenseNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpensePurpose" msprop:Generator_ColumnVarNameInTable="columnExpensePurpose" msprop:Generator_ColumnPropNameInRow="ExpensePurpose" msprop:Generator_ColumnPropNameInTable="ExpensePurposeColumn" msprop:Generator_UserColumnName="ExpensePurpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpensePlace" msprop:Generator_ColumnVarNameInTable="columnExpensePlace" msprop:Generator_ColumnPropNameInRow="ExpensePlace" msprop:Generator_ColumnPropNameInTable="ExpensePlaceColumn" msprop:Generator_UserColumnName="ExpensePlace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpenseFromDate" msprop:Generator_ColumnVarNameInTable="columnExpenseFromDate" msprop:Generator_ColumnPropNameInRow="ExpenseFromDate" msprop:Generator_ColumnPropNameInTable="ExpenseFromDateColumn" msprop:Generator_UserColumnName="ExpenseFromDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseToDate" msprop:Generator_ColumnVarNameInTable="columnExpenseToDate" msprop:Generator_ColumnPropNameInRow="ExpenseToDate" msprop:Generator_ColumnPropNameInTable="ExpenseToDateColumn" msprop:Generator_UserColumnName="ExpenseToDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseIssueDate" msprop:Generator_ColumnVarNameInTable="columnExpenseIssueDate" msprop:Generator_ColumnPropNameInRow="ExpenseIssueDate" msprop:Generator_ColumnPropNameInTable="ExpenseIssueDateColumn" msprop:Generator_UserColumnName="ExpenseIssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseAmount" msprop:Generator_ColumnVarNameInTable="columnExpenseAmount" msprop:Generator_ColumnPropNameInRow="ExpenseAmount" msprop:Generator_ColumnPropNameInTable="ExpenseAmountColumn" msprop:Generator_UserColumnName="ExpenseAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Advance_SP_GetOverseasTravelReport" msprop:Generator_TableClassName="Advance_SP_GetOverseasTravelReportDataTable" msprop:Generator_TableVarName="tableAdvance_SP_GetOverseasTravelReport" msprop:Generator_TablePropName="Advance_SP_GetOverseasTravelReport" msprop:Generator_RowDeletingName="Advance_SP_GetOverseasTravelReportRowDeleting" msprop:Generator_RowChangingName="Advance_SP_GetOverseasTravelReportRowChanging" msprop:Generator_RowEvHandlerName="Advance_SP_GetOverseasTravelReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Advance_SP_GetOverseasTravelReportRowDeleted" msprop:Generator_UserTableName="Advance_SP_GetOverseasTravelReport" msprop:Generator_RowChangedName="Advance_SP_GetOverseasTravelReportRowChanged" msprop:Generator_RowEvArgName="Advance_SP_GetOverseasTravelReportRowChangeEvent" msprop:Generator_RowClassName="Advance_SP_GetOverseasTravelReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeId" msprop:Generator_ColumnVarNameInTable="columnEmployeeId" msprop:Generator_ColumnPropNameInRow="EmployeeId" msprop:Generator_ColumnPropNameInTable="EmployeeIdColumn" msprop:Generator_UserColumnName="EmployeeId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeUserName" msprop:Generator_ColumnVarNameInTable="columnEmployeeUserName" msprop:Generator_ColumnPropNameInRow="EmployeeUserName" msprop:Generator_ColumnPropNameInTable="EmployeeUserNameColumn" msprop:Generator_UserColumnName="EmployeeUserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnRequisitionId" msprop:Generator_ColumnPropNameInRow="RequisitionId" msprop:Generator_ColumnPropNameInTable="RequisitionIdColumn" msprop:Generator_UserColumnName="RequisitionId" type="xs:long" />
+              <xs:element name="RequisitionNo" msprop:Generator_ColumnVarNameInTable="columnRequisitionNo" msprop:Generator_ColumnPropNameInRow="RequisitionNo" msprop:Generator_ColumnPropNameInTable="RequisitionNoColumn" msprop:Generator_UserColumnName="RequisitionNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionPurpose" msprop:Generator_ColumnVarNameInTable="columnRequisitionPurpose" msprop:Generator_ColumnPropNameInRow="RequisitionPurpose" msprop:Generator_ColumnPropNameInTable="RequisitionPurposeColumn" msprop:Generator_UserColumnName="RequisitionPurpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionPlace" msprop:Generator_ColumnVarNameInTable="columnRequisitionPlace" msprop:Generator_ColumnPropNameInRow="RequisitionPlace" msprop:Generator_ColumnPropNameInTable="RequisitionPlaceColumn" msprop:Generator_UserColumnName="RequisitionPlace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionCountryName" msprop:Generator_ColumnVarNameInTable="columnRequisitionCountryName" msprop:Generator_ColumnPropNameInRow="RequisitionCountryName" msprop:Generator_ColumnPropNameInTable="RequisitionCountryNameColumn" msprop:Generator_UserColumnName="RequisitionCountryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionFromDate" msprop:Generator_ColumnVarNameInTable="columnRequisitionFromDate" msprop:Generator_ColumnPropNameInRow="RequisitionFromDate" msprop:Generator_ColumnPropNameInTable="RequisitionFromDateColumn" msprop:Generator_UserColumnName="RequisitionFromDate" type="xs:dateTime" />
+              <xs:element name="RequisitionToDate" msprop:Generator_ColumnVarNameInTable="columnRequisitionToDate" msprop:Generator_ColumnPropNameInRow="RequisitionToDate" msprop:Generator_ColumnPropNameInTable="RequisitionToDateColumn" msprop:Generator_UserColumnName="RequisitionToDate" type="xs:dateTime" />
+              <xs:element name="AdvanceIssueDate" msprop:Generator_ColumnVarNameInTable="columnAdvanceIssueDate" msprop:Generator_ColumnPropNameInRow="AdvanceIssueDate" msprop:Generator_ColumnPropNameInTable="AdvanceIssueDateColumn" msprop:Generator_UserColumnName="AdvanceIssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AdvanceAmount" msprop:Generator_ColumnVarNameInTable="columnAdvanceAmount" msprop:Generator_ColumnPropNameInRow="AdvanceAmount" msprop:Generator_ColumnPropNameInTable="AdvanceAmountColumn" msprop:Generator_UserColumnName="AdvanceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExpenseId" msprop:Generator_ColumnVarNameInTable="columnExpenseId" msprop:Generator_ColumnPropNameInRow="ExpenseId" msprop:Generator_ColumnPropNameInTable="ExpenseIdColumn" msprop:Generator_UserColumnName="ExpenseId" type="xs:long" minOccurs="0" />
+              <xs:element name="ExpenseNo" msprop:Generator_ColumnVarNameInTable="columnExpenseNo" msprop:Generator_ColumnPropNameInRow="ExpenseNo" msprop:Generator_ColumnPropNameInTable="ExpenseNoColumn" msprop:Generator_UserColumnName="ExpenseNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpensePurpose" msprop:Generator_ColumnVarNameInTable="columnExpensePurpose" msprop:Generator_ColumnPropNameInRow="ExpensePurpose" msprop:Generator_ColumnPropNameInTable="ExpensePurposeColumn" msprop:Generator_UserColumnName="ExpensePurpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpensePlace" msprop:Generator_ColumnVarNameInTable="columnExpensePlace" msprop:Generator_ColumnPropNameInRow="ExpensePlace" msprop:Generator_ColumnPropNameInTable="ExpensePlaceColumn" msprop:Generator_UserColumnName="ExpensePlace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpenseCountryName" msprop:Generator_ColumnVarNameInTable="columnExpenseCountryName" msprop:Generator_ColumnPropNameInRow="ExpenseCountryName" msprop:Generator_ColumnPropNameInTable="ExpenseCountryNameColumn" msprop:Generator_UserColumnName="ExpenseCountryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpenseFromDate" msprop:Generator_ColumnVarNameInTable="columnExpenseFromDate" msprop:Generator_ColumnPropNameInRow="ExpenseFromDate" msprop:Generator_ColumnPropNameInTable="ExpenseFromDateColumn" msprop:Generator_UserColumnName="ExpenseFromDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseToDate" msprop:Generator_ColumnVarNameInTable="columnExpenseToDate" msprop:Generator_ColumnPropNameInRow="ExpenseToDate" msprop:Generator_ColumnPropNameInTable="ExpenseToDateColumn" msprop:Generator_UserColumnName="ExpenseToDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseIssueDate" msprop:Generator_ColumnVarNameInTable="columnExpenseIssueDate" msprop:Generator_ColumnPropNameInRow="ExpenseIssueDate" msprop:Generator_ColumnPropNameInTable="ExpenseIssueDateColumn" msprop:Generator_UserColumnName="ExpenseIssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseAmount" msprop:Generator_ColumnVarNameInTable="columnExpenseAmount" msprop:Generator_ColumnPropNameInRow="ExpenseAmount" msprop:Generator_ColumnPropNameInTable="ExpenseAmountColumn" msprop:Generator_UserColumnName="ExpenseAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Advance_VW_GetRequisitionSignatory" />
+      <xs:field xpath="mstns:RequisitionId" />
+    </xs:unique>
+    <xs:unique name="Advance_VW_GetExpenseSignatory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Advance_VW_GetExpenseSignatory" />
+      <xs:field xpath="mstns:ExpenseId" />
+    </xs:unique>
+    <xs:unique name="Advance_VW_GetLocalTravelReport_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:Advance_VW_GetLocalTravelReport" />
+      <xs:field xpath="mstns:DepartmentId" />
+      <xs:field xpath="mstns:RequisitionId" />
+      <xs:field xpath="mstns:ExpenseId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

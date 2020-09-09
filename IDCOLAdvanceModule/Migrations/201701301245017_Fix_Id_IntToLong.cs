@@ -1,0 +1,152 @@
+namespace IDCOLAdvanceModule.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class Fix_Id_IntToLong : DbMigration
+    {
+        public override void Up()
+        {
+            DropForeignKey("dbo.RequisitionApprovalTicket", "ApprovalLevelId", "dbo.ApprovalLevel");
+            DropForeignKey("dbo.RequisitionApprovalTracker", "ApprovalLevelId", "dbo.ApprovalLevel");
+            DropForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId", "dbo.ApprovalLevel");
+            DropForeignKey("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId", "dbo.ApprovalLevel");
+            DropForeignKey("dbo.RequisitionApprovalTicket", "ApprovalPanelId", "dbo.ApprovalPanel");
+            DropForeignKey("dbo.RequisitionApprovalTracker", "ApprovalPanelId", "dbo.ApprovalPanel");
+            DropForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId", "dbo.ApprovalPanel");
+            DropForeignKey("dbo.ApprovalPanel", "ApprovalPanelTypeId", "dbo.ApprovalPanelType");
+            DropForeignKey("dbo.RequisitionApprovalTracker", "ApprovalStatusId", "dbo.ApprovalStatus");
+            DropForeignKey("dbo.RequisitionApprovalTicket", "ApprovalStatusId", "dbo.ApprovalStatus");
+            DropIndex("dbo.RequisitionApprovalTicket", new[] { "ApprovalStatusId" });
+            DropIndex("dbo.RequisitionApprovalTicket", new[] { "ApprovalPanelId" });
+            DropIndex("dbo.RequisitionApprovalTicket", new[] { "ApprovalLevelId" });
+            DropIndex("dbo.RequisitionApprovalTracker", new[] { "ApprovalStatusId" });
+            DropIndex("dbo.RequisitionApprovalTracker", new[] { "ApprovalPanelId" });
+            DropIndex("dbo.RequisitionApprovalTracker", new[] { "ApprovalLevelId" });
+            DropIndex("dbo.ApprovalPanel", new[] { "ApprovalPanelTypeId" });
+            DropIndex("dbo.ApprovalLevelForApprovalPanel", new[] { "ApprovalPanelId" });
+            DropIndex("dbo.ApprovalLevelForApprovalPanel", new[] { "ApprovalLevelId" });
+            DropIndex("dbo.ApprovalLevelForApprovalPanel", new[] { "ParentApprovalLevelId" });
+            DropPrimaryKey("dbo.ApprovalLevel");
+            DropPrimaryKey("dbo.RequisitionApprovalTracker");
+            DropPrimaryKey("dbo.ApprovalPanel");
+            DropPrimaryKey("dbo.ApprovalPanelType");
+            DropPrimaryKey("dbo.ApprovalStatus");
+            DropPrimaryKey("dbo.ApprovalLevelForApprovalPanel");
+            AlterColumn("dbo.RequisitionApprovalTicket", "ApprovalStatusId", c => c.Long(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTicket", "ApprovalPanelId", c => c.Long(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTicket", "ApprovalLevelId", c => c.Long(nullable: false));
+            AlterColumn("dbo.ApprovalLevel", "Id", c => c.Long(nullable: false, identity: true));
+            AlterColumn("dbo.RequisitionApprovalTracker", "Id", c => c.Long(nullable: false, identity: true));
+            AlterColumn("dbo.RequisitionApprovalTracker", "ApprovalStatusId", c => c.Long(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTracker", "ApprovalPanelId", c => c.Long(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTracker", "ApprovalLevelId", c => c.Long(nullable: false));
+            AlterColumn("dbo.ApprovalPanel", "Id", c => c.Long(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalPanel", "ApprovalPanelTypeId", c => c.Long(nullable: false));
+            AlterColumn("dbo.ApprovalPanelType", "Id", c => c.Long(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalStatus", "Id", c => c.Long(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "Id", c => c.Long(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId", c => c.Long(nullable: false));
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId", c => c.Long(nullable: false));
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId", c => c.Long());
+            AddPrimaryKey("dbo.ApprovalLevel", "Id");
+            AddPrimaryKey("dbo.RequisitionApprovalTracker", "Id");
+            AddPrimaryKey("dbo.ApprovalPanel", "Id");
+            AddPrimaryKey("dbo.ApprovalPanelType", "Id");
+            AddPrimaryKey("dbo.ApprovalStatus", "Id");
+            AddPrimaryKey("dbo.ApprovalLevelForApprovalPanel", "Id");
+            CreateIndex("dbo.RequisitionApprovalTicket", "ApprovalStatusId");
+            CreateIndex("dbo.RequisitionApprovalTicket", "ApprovalPanelId");
+            CreateIndex("dbo.RequisitionApprovalTicket", "ApprovalLevelId");
+            CreateIndex("dbo.RequisitionApprovalTracker", "ApprovalStatusId");
+            CreateIndex("dbo.RequisitionApprovalTracker", "ApprovalPanelId");
+            CreateIndex("dbo.RequisitionApprovalTracker", "ApprovalLevelId");
+            CreateIndex("dbo.ApprovalPanel", "ApprovalPanelTypeId");
+            CreateIndex("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId");
+            CreateIndex("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId");
+            CreateIndex("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId");
+            AddForeignKey("dbo.RequisitionApprovalTicket", "ApprovalLevelId", "dbo.ApprovalLevel", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTracker", "ApprovalLevelId", "dbo.ApprovalLevel", "Id");
+            AddForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId", "dbo.ApprovalLevel", "Id");
+            AddForeignKey("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId", "dbo.ApprovalLevel", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTicket", "ApprovalPanelId", "dbo.ApprovalPanel", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTracker", "ApprovalPanelId", "dbo.ApprovalPanel", "Id");
+            AddForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId", "dbo.ApprovalPanel", "Id");
+            AddForeignKey("dbo.ApprovalPanel", "ApprovalPanelTypeId", "dbo.ApprovalPanelType", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTracker", "ApprovalStatusId", "dbo.ApprovalStatus", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTicket", "ApprovalStatusId", "dbo.ApprovalStatus", "Id");
+        }
+        
+        public override void Down()
+        {
+            DropForeignKey("dbo.RequisitionApprovalTicket", "ApprovalStatusId", "dbo.ApprovalStatus");
+            DropForeignKey("dbo.RequisitionApprovalTracker", "ApprovalStatusId", "dbo.ApprovalStatus");
+            DropForeignKey("dbo.ApprovalPanel", "ApprovalPanelTypeId", "dbo.ApprovalPanelType");
+            DropForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId", "dbo.ApprovalPanel");
+            DropForeignKey("dbo.RequisitionApprovalTracker", "ApprovalPanelId", "dbo.ApprovalPanel");
+            DropForeignKey("dbo.RequisitionApprovalTicket", "ApprovalPanelId", "dbo.ApprovalPanel");
+            DropForeignKey("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId", "dbo.ApprovalLevel");
+            DropForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId", "dbo.ApprovalLevel");
+            DropForeignKey("dbo.RequisitionApprovalTracker", "ApprovalLevelId", "dbo.ApprovalLevel");
+            DropForeignKey("dbo.RequisitionApprovalTicket", "ApprovalLevelId", "dbo.ApprovalLevel");
+            DropIndex("dbo.ApprovalLevelForApprovalPanel", new[] { "ParentApprovalLevelId" });
+            DropIndex("dbo.ApprovalLevelForApprovalPanel", new[] { "ApprovalLevelId" });
+            DropIndex("dbo.ApprovalLevelForApprovalPanel", new[] { "ApprovalPanelId" });
+            DropIndex("dbo.ApprovalPanel", new[] { "ApprovalPanelTypeId" });
+            DropIndex("dbo.RequisitionApprovalTracker", new[] { "ApprovalLevelId" });
+            DropIndex("dbo.RequisitionApprovalTracker", new[] { "ApprovalPanelId" });
+            DropIndex("dbo.RequisitionApprovalTracker", new[] { "ApprovalStatusId" });
+            DropIndex("dbo.RequisitionApprovalTicket", new[] { "ApprovalLevelId" });
+            DropIndex("dbo.RequisitionApprovalTicket", new[] { "ApprovalPanelId" });
+            DropIndex("dbo.RequisitionApprovalTicket", new[] { "ApprovalStatusId" });
+            DropPrimaryKey("dbo.ApprovalLevelForApprovalPanel");
+            DropPrimaryKey("dbo.ApprovalStatus");
+            DropPrimaryKey("dbo.ApprovalPanelType");
+            DropPrimaryKey("dbo.ApprovalPanel");
+            DropPrimaryKey("dbo.RequisitionApprovalTracker");
+            DropPrimaryKey("dbo.ApprovalLevel");
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId", c => c.Int());
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId", c => c.Int(nullable: false));
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId", c => c.Int(nullable: false));
+            AlterColumn("dbo.ApprovalLevelForApprovalPanel", "Id", c => c.Int(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalStatus", "Id", c => c.Int(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalPanelType", "Id", c => c.Int(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalPanel", "ApprovalPanelTypeId", c => c.Int(nullable: false));
+            AlterColumn("dbo.ApprovalPanel", "Id", c => c.Int(nullable: false, identity: true));
+            AlterColumn("dbo.RequisitionApprovalTracker", "ApprovalLevelId", c => c.Int(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTracker", "ApprovalPanelId", c => c.Int(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTracker", "ApprovalStatusId", c => c.Int(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTracker", "Id", c => c.Int(nullable: false, identity: true));
+            AlterColumn("dbo.ApprovalLevel", "Id", c => c.Int(nullable: false, identity: true));
+            AlterColumn("dbo.RequisitionApprovalTicket", "ApprovalLevelId", c => c.Int(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTicket", "ApprovalPanelId", c => c.Int(nullable: false));
+            AlterColumn("dbo.RequisitionApprovalTicket", "ApprovalStatusId", c => c.Int(nullable: false));
+            AddPrimaryKey("dbo.ApprovalLevelForApprovalPanel", "Id");
+            AddPrimaryKey("dbo.ApprovalStatus", "Id");
+            AddPrimaryKey("dbo.ApprovalPanelType", "Id");
+            AddPrimaryKey("dbo.ApprovalPanel", "Id");
+            AddPrimaryKey("dbo.RequisitionApprovalTracker", "Id");
+            AddPrimaryKey("dbo.ApprovalLevel", "Id");
+            CreateIndex("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId");
+            CreateIndex("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId");
+            CreateIndex("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId");
+            CreateIndex("dbo.ApprovalPanel", "ApprovalPanelTypeId");
+            CreateIndex("dbo.RequisitionApprovalTracker", "ApprovalLevelId");
+            CreateIndex("dbo.RequisitionApprovalTracker", "ApprovalPanelId");
+            CreateIndex("dbo.RequisitionApprovalTracker", "ApprovalStatusId");
+            CreateIndex("dbo.RequisitionApprovalTicket", "ApprovalLevelId");
+            CreateIndex("dbo.RequisitionApprovalTicket", "ApprovalPanelId");
+            CreateIndex("dbo.RequisitionApprovalTicket", "ApprovalStatusId");
+            AddForeignKey("dbo.RequisitionApprovalTicket", "ApprovalStatusId", "dbo.ApprovalStatus", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTracker", "ApprovalStatusId", "dbo.ApprovalStatus", "Id");
+            AddForeignKey("dbo.ApprovalPanel", "ApprovalPanelTypeId", "dbo.ApprovalPanelType", "Id");
+            AddForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalPanelId", "dbo.ApprovalPanel", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTracker", "ApprovalPanelId", "dbo.ApprovalPanel", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTicket", "ApprovalPanelId", "dbo.ApprovalPanel", "Id");
+            AddForeignKey("dbo.ApprovalLevelForApprovalPanel", "ParentApprovalLevelId", "dbo.ApprovalLevel", "Id");
+            AddForeignKey("dbo.ApprovalLevelForApprovalPanel", "ApprovalLevelId", "dbo.ApprovalLevel", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTracker", "ApprovalLevelId", "dbo.ApprovalLevel", "Id");
+            AddForeignKey("dbo.RequisitionApprovalTicket", "ApprovalLevelId", "dbo.ApprovalLevel", "Id");
+        }
+    }
+}

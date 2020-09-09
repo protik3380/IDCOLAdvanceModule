@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IDCOLMISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Accounts_ChartOfAccounts">
+    <Key>
+      <PropertyRef Name="AccountCode" />
+    </Key>
+    <Property Name="AccountCode" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AccountType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DefaultCurrencyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountGroup" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="StructureCode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="NormalBalance" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProjectID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="CashBankType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COATypeID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IsOnBalanceSheet" Type="Boolean" />
+    <Property Name="Solar_POID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IsRefinence" Type="Boolean" />
+    <Property Name="Category_ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IsDonor" Type="Boolean" />
+    <Property Name="Branch_ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IsVatTaxAccount" Type="Boolean" Nullable="false" />
+    <Property Name="IsRetentionAccount" Type="Boolean" Nullable="false" />
+    <Property Name="VatTaxTypeId" Type="Int32" />
+    <NavigationProperty Name="Loan_Bank_Branch" Relationship="Self.FK_Accounts_ChartOfAccounts_Loan_Bank_Branch" FromRole="Accounts_ChartOfAccounts" ToRole="Loan_Bank_Branch" />
+  </EntityType>
+  <EntityType Name="Accounts_FiscalYear">
+    <Key>
+      <PropertyRef Name="FiscalYearId" />
+    </Key>
+    <Property Name="FiscalYearId" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FiscalYearName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateFrom" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateTo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsCurrent" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsClosed" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Admin_Office">
+    <Key>
+      <PropertyRef Name="OfficeID" />
+    </Key>
+    <Property Name="OfficeID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OfficeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="0" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Priority" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OrderBy" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeType" Type="Int32" />
+    <NavigationProperty Name="UserTables" Relationship="Self.FK_UserTable_Admin_Office" FromRole="Admin_Office" ToRole="UserTable" />
+  </EntityType>
+  <EntityType Name="Admin_Rank">
+    <Key>
+      <PropertyRef Name="RankID" />
+    </Key>
+    <Property Name="RankID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Priority" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OrderBy" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="UserTables" Relationship="Self.FK_UserTable_Admin_Rank" FromRole="Admin_Rank" ToRole="UserTable" />
+  </EntityType>
+  <EntityType Name="Loan_Bank">
+    <Key>
+      <PropertyRef Name="Bank_ID" />
+    </Key>
+    <Property Name="Bank_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Bank_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Bank_Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Created_On" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActiveForLoanDept" Type="Boolean" />
+    <Property Name="IsActiveForAccountsDept" Type="Boolean" />
+    <Property Name="IsActiveForRE" Type="Boolean" />
+    <Property Name="ChequeType" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Loan_Bank_Branch" Relationship="Self.FK_Loan_Bank_Branch_Loan_Bank" FromRole="Loan_Bank" ToRole="Loan_Bank_Branch" />
+  </EntityType>
+  <EntityType Name="Loan_Bank_Branch">
+    <Key>
+      <PropertyRef Name="Branch_ID" />
+    </Key>
+    <Property Name="Branch_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Bank_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Branch_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Created_On" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts_ChartOfAccounts" Relationship="Self.FK_Accounts_ChartOfAccounts_Loan_Bank_Branch" FromRole="Loan_Bank_Branch" ToRole="Accounts_ChartOfAccounts" />
+    <NavigationProperty Name="Loan_Bank" Relationship="Self.FK_Loan_Bank_Branch_Loan_Bank" FromRole="Loan_Bank_Branch" ToRole="Loan_Bank" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NamePrefix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameSuffix" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TemporaryAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryPhone2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryEmail2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NationalID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDate" Type="DateTime" Precision="0" />
+    <Property Name="IsMerried" Type="Boolean" />
+    <Property Name="SpouseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SpousePhoneNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="BloodGroupID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RankID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EmployeeID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SupervisorID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OfficeID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WorkLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrimaryEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Extension" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrimaryPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="JoiningDate" Type="DateTime" Precision="0" />
+    <Property Name="PCName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecretQuestion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecretAnswer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordExpirationDays" Type="Int32" />
+    <Property Name="PaswordInvalidAccess" Type="Int32" />
+    <Property Name="ISDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="EmeggencyContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyContactAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyContactPrimaryPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyContactSecondaryPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyContactRelationshipID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BankAccountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Admin_Office" Relationship="Self.FK_UserTable_Admin_Office" FromRole="UserTable" ToRole="Admin_Office" />
+    <NavigationProperty Name="Admin_Rank" Relationship="Self.FK_UserTable_Admin_Rank" FromRole="UserTable" ToRole="Admin_Rank" />
+    <NavigationProperty Name="UserTable1" Relationship="Self.FK_UserTable_UserTable_SUPERVISOR" FromRole="UserTable" ToRole="UserTable1" />
+    <NavigationProperty Name="UserTable2" Relationship="Self.FK_UserTable_UserTable_SUPERVISOR" FromRole="UserTable1" ToRole="UserTable" />
+    <NavigationProperty Name="Admin_Departments" Relationship="IDCOLMISModel.FK_UserTable_Admin_Departments" FromRole="UserTable" ToRole="Admin_Departments" />
+  </EntityType>
+  <Association Name="FK_Accounts_ChartOfAccounts_Loan_Bank_Branch">
+    <End Role="Loan_Bank_Branch" Type="Self.Loan_Bank_Branch" Multiplicity="0..1" />
+    <End Role="Accounts_ChartOfAccounts" Type="Self.Accounts_ChartOfAccounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loan_Bank_Branch">
+        <PropertyRef Name="Branch_ID" />
+      </Principal>
+      <Dependent Role="Accounts_ChartOfAccounts">
+        <PropertyRef Name="Branch_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTable_Admin_Office">
+    <End Role="Admin_Office" Type="Self.Admin_Office" Multiplicity="0..1" />
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin_Office">
+        <PropertyRef Name="OfficeID" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="OfficeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTable_Admin_Rank">
+    <End Role="Admin_Rank" Type="Self.Admin_Rank" Multiplicity="0..1" />
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin_Rank">
+        <PropertyRef Name="RankID" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="RankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Loan_Bank_Branch_Loan_Bank">
+    <End Role="Loan_Bank" Type="Self.Loan_Bank" Multiplicity="1" />
+    <End Role="Loan_Bank_Branch" Type="Self.Loan_Bank_Branch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loan_Bank">
+        <PropertyRef Name="Bank_ID" />
+      </Principal>
+      <Dependent Role="Loan_Bank_Branch">
+        <PropertyRef Name="Bank_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTable_UserTable_SUPERVISOR">
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="0..1" />
+    <End Role="UserTable1" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserTable1">
+        <PropertyRef Name="SupervisorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MISContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts_ChartOfAccounts" EntityType="Self.Accounts_ChartOfAccounts" />
+    <EntitySet Name="Accounts_FiscalYear" EntityType="Self.Accounts_FiscalYear" />
+    <EntitySet Name="Admin_Office" EntityType="Self.Admin_Office" />
+    <EntitySet Name="Admin_Rank" EntityType="Self.Admin_Rank" />
+    <EntitySet Name="Loan_Bank" EntityType="Self.Loan_Bank" />
+    <EntitySet Name="Loan_Bank_Branch" EntityType="Self.Loan_Bank_Branch" />
+    <EntitySet Name="UserTables" EntityType="Self.UserTable" />
+    <AssociationSet Name="FK_Accounts_ChartOfAccounts_Loan_Bank_Branch" Association="Self.FK_Accounts_ChartOfAccounts_Loan_Bank_Branch">
+      <End Role="Loan_Bank_Branch" EntitySet="Loan_Bank_Branch" />
+      <End Role="Accounts_ChartOfAccounts" EntitySet="Accounts_ChartOfAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTable_Admin_Office" Association="Self.FK_UserTable_Admin_Office">
+      <End Role="Admin_Office" EntitySet="Admin_Office" />
+      <End Role="UserTable" EntitySet="UserTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTable_Admin_Rank" Association="Self.FK_UserTable_Admin_Rank">
+      <End Role="Admin_Rank" EntitySet="Admin_Rank" />
+      <End Role="UserTable" EntitySet="UserTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Loan_Bank_Branch_Loan_Bank" Association="Self.FK_Loan_Bank_Branch_Loan_Bank">
+      <End Role="Loan_Bank" EntitySet="Loan_Bank" />
+      <End Role="Loan_Bank_Branch" EntitySet="Loan_Bank_Branch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTable_UserTable_SUPERVISOR" Association="Self.FK_UserTable_UserTable_SUPERVISOR">
+      <End Role="UserTable" EntitySet="UserTables" />
+      <End Role="UserTable1" EntitySet="UserTables" />
+    </AssociationSet>
+    <EntitySet Name="Accounts_NC_VendorInfo" EntityType="IDCOLMISModel.Accounts_NC_VendorInfo" />
+    <EntitySet Name="Solar_CurrencyInfo" EntityType="IDCOLMISModel.Solar_CurrencyInfo" />
+    <EntitySet Name="Admin_Departments" EntityType="IDCOLMISModel.Admin_Departments" />
+    <AssociationSet Name="FK_UserTable_Admin_Departments" Association="IDCOLMISModel.FK_UserTable_Admin_Departments">
+      <End Role="Admin_Departments" EntitySet="Admin_Departments" />
+      <End Role="UserTable" EntitySet="UserTables" />
+    </AssociationSet>
+    <EntitySet Name="Accounts_NC_VatTaxCategory" EntityType="IDCOLMISModel.Accounts_NC_VatTaxCategory" />
+    <EntitySet Name="Accounts_NC_VATTAXTypeConfig" EntityType="IDCOLMISModel.Accounts_NC_VATTAXTypeConfig" />
+    <EntitySet Name="Accounts_VoucherTypes" EntityType="IDCOLMISModel.Accounts_VoucherTypes" />
+  </EntityContainer>
+  <EntityType Name="Accounts_NC_VendorInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsCompany" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solar_CurrencyInfo">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Symbol" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="UnitName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsBase" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ShortName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Admin_Departments">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Priority" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OrderBy" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserTable" Relationship="IDCOLMISModel.FK_UserTable_Admin_Departments" FromRole="Admin_Departments" ToRole="UserTable" />
+  </EntityType>
+  <Association Name="FK_UserTable_Admin_Departments">
+    <End Type="IDCOLMISModel.Admin_Departments" Role="Admin_Departments" Multiplicity="0..1" />
+    <End Type="IDCOLMISModel.UserTable" Role="UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin_Departments">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Accounts_NC_VatTaxCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Percentage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VatTaxTypeId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Accounts_NC_VATTAXTypeConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Accounts_VoucherTypes">
+    <Key>
+      <PropertyRef Name="VouTypeId" />
+    </Key>
+    <Property Name="VouTypeId" Type="Int16" Nullable="false" />
+    <Property Name="VouType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
